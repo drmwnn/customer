@@ -1,31 +1,784 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Asdarr.id</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo/shorcut.png" />
+
+    <!-- CSS only bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- end -->
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
+    <!-- end -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <title>AsdarrID - Website Top-up Game dan Produk Digital Murah</title>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="image/logo atas.png" alt="logo" class="logo-img" />
+    <div class="cmb-header-shadow">
+        <div class="container">
+            <header
+                class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 site-header">
+
+                <!-- logo -->
+                <a href="index.html" class="d-flex align-items-center col-md-2 mb-2 mb-md-0">
+                    <img src="assets/images/logo/logo-a.png" class="logo" alt=".." height="40">
+                </a>
+                <!-- end logo -->
+
+                <!--  -->
+                <nav class="cbm-main-menu">
+                    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 fs-5">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="#Game" class="nav-link">Game</a></li>
+                        <li><a href="#Voucher" class="nav-link">Voucher</a></li>
+                        <li><a href="#Entertainment" class="nav-link">Entertainment</a></li>
+                    </ul>
+                </nav>
+                <!--  -->
+
+                <!-- button masuk/daftar -->
+                <div class="col-md-3 text-end">
+                    <a href="#" class="btn btn-outline-primary me-2 flex-shrink-0">Masuk</a>
+                    <a href="#" class="btn btn-primary">Daftar</a>
+                </div>
+                <!-- end button -->
+            </header>
         </div>
+    </div>
 
-        <nav>
-            <ul>
-                <table>
-                    <tr>
-                        <td><button class="btn-sign">Sign Up</button></td>
-                        <td><button class="btn-sign">Login</button></td>
-                    </tr>
-                </table>
-            </ul>
-        </nav>
+    <div class="site-main">
+        <!-- image slider -->
+        <div class="wrap">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/slide/1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/slide/2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/slide/3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- end image slider -->
+        <br>
+        <!-- Game -->
+        <div class="container" id="Game">
+            <br>
+            <div class="mb-4 text-center">
+                <h2 class="display-6 fw-600 fs-2"><b>Game</b></h2>
+            </div>
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-5 g-4 justify-content-center">
 
-    </header>
+                <!-- AOV -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Arena of Valor">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/aov.webp" class="card-img-top" title="Arena of Valor">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">Arena of Valor
+                                    </h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>Garena</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end AOV -->
+
+                <!-- AU2 MOBILE -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="AU2 Mobile">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/au2-mobile.jpg" class="card-img-top" title="AU2 Mobile">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">AU2 Mobile</h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>Uniugame</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end AU2 Mobile -->
+
+                <!-- CODM -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Call of Duty Mobile">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/codm.jpg" class="card-img-top" title="Call of Duty Mobile">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">
+                                        Call of Duty Mobile</h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>Garena</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end CODM -->
+
+                <!-- Saga of Skywalkers -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Cloud Song: Saga of Skywalkers">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/cloud song.png" class="card-img-top"
+                                    title="Cloud Song: Saga of Skywalkers">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">
+                                        Cloud Song: Saga of Skywalkers</h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>VNG Singapore</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Saga of Skywalkers -->
+
+                <!-- Footbal Master -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Footbal Master 2">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/footbal.jpg" class="card-img-top"
+                                    title="Footbal Master 2">`
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">
+                                        Footbal Master 2</h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>GalaSport</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Footbal Master -->
+
+                <!-- FF -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Free Fire">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/ff.webp" class="card-img-top" title="Free Fire">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">Free Fire</h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>Garena</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end FF -->
+
+                <!-- Genshin Impact -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Genshin Impact">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/genshin-impact.webp" class="card-img-top"
+                                    title="Genshin Impact">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">Genshin Impact
+                                    </h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>HoYoverse</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Genshin Impact -->
+
+                <!-- Hyper Front -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Hyper Front">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/Hyper Front.jpeg" class="card-img-top" title="Hyper Front">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem!;">Hyper Front
+                                    </h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>NTES Games</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Hyper Front -->
+
+                <!-- Laplace -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Laplace">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/laplace.jpg" class="card-img-top" title="Laplace">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">Laplace</h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>Zlong</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Laplace -->
+
+                <!-- LifeAfter -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="LifeAfter">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/lifeafter.webp" class="card-img-top" title="LifeAfter">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">LifeAfter</h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>NetEase</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end LifeAfter -->
+
+                <!-- Lokapala -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Lokapala">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/Lokapala.webp" class="card-img-top" title="Lokapala">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">Lokapala</h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>PT Melon Indonesia</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Lokapala -->
+
+                <!-- Lords Mobile -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Lords Mobile">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/Lords Mobile.jpg" class="card-img-top"
+                                    title="Lords Mobile">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">Lords Mobile
+                                    </h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>IGG</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Lords Mobile -->
+
+                <!-- Mobile Legends -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="produk/mobile-legends.html" title="Mobile Legends">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/mlbb.webp" class="card-img-top" title="Mobile Legends">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">
+                                        Mobile Legends</h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>Moonton</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Mobile Legends -->
+
+                <!-- Omega Legends -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Omega Legends">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/Omega Legends.jpg" class="card-img-top"
+                                    title="Omega Legends">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">Omega Legends
+                                    </h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>IGG</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Omega Legends -->
+
+                <!-- Point Blank -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Point Blank">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/Point Blank.jpg" class="card-img-top" title="Point Blank">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">Point Blank
+                                    </h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>Zepetto</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Point Blank -->
+
+                <!-- PUBGM -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="PUBG Mobile">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/PUBG Mobile.png" class="card-img-top" title="PUBG Mobile">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">PUBG Mobile
+                                    </h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>Tencent</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end PUBGM -->
+
+                <!-- Speed Drifters -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Speed Drifters">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/Speed Drifters.jpg" class="card-img-top"
+                                    title="Speed Drifters">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">SpeedDrifters
+                                    </h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>Garena</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Speed Drifters -->
+
+                <!-- Tom and jerry -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Tom and Jerry">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/Tom and Jerry.png" class="card-img-top"
+                                    title="Tom and Jerry">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">Tom and Jerry:
+                                        Chase</h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>NetEase</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Tom and Jerry -->
+
+                <!-- Tower of Fantasy -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Tower of Fantasy">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/Tower of Fantasy.jpg" class="card-img-top"
+                                    title="Tower of Fantasy">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">Tower of
+                                        Fantasy</h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>Level Infinity</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Tower OF Fantasy -->
+
+                <!-- Werewolf -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Werewolf">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/Werewolf.jpg" class="card-img-top" title="Werewolf">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">Werewolf</h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>Walkman</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Werewolf -->
+            </div>
+        </div>
+        <!-- end game -->
+
+        <!-- Voucher -->
+        <div class="container" id="Voucher">
+            <br>
+            <div class="mb-3 text-center">
+                <h2 class="display-6 fw-600 fs-2"><b>Voucher</b></h2>
+            </div>
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-5 g-4 justify-content-center">
+                <!-- Tinder -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Tinder">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/tinder.jpg" class="card-img-top" title="Tinder">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">Tinder</h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>Tinder</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Tinder -->
+
+                <!-- Garena Shell -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Garena Shell">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/Garena Shell.jpg" class="card-img-top"
+                                    title="Garena Shell">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">
+                                        Garena Shell</h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>Garena</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Garena Shell -->
+
+                <!-- Minecraft Coins -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Minecraft Coins">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/Minecraft Coin.webp" class="card-img-top"
+                                    title="Minecraft Coins">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">Minecraft Coins
+                                    </h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>Minecraft</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Minecraft Coins -->
+
+                <!-- Smile One -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Smile One">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/Smile One.jpg" class="card-img-top" title="Smile One">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">Coin Smile One
+                                    </h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>Smile One</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Smile One -->
+
+                <!-- Crunchyroll -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="/" title="Crunchyroll">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/Crunchyroll.jpg" class="card-img-top" title="Crunchyroll">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">Crunchyroll
+                                    </h3>
+                                    <div class="fs-6 text-muted ">
+                                        <div itemprop="name">Crunchyroll</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Crunchyroll -->
+            </div>
+        </div>
+        <!-- end voucher -->
+
+        <!-- Entertainment -->
+        <div class="container" id="Entertainment">
+            <br>
+            <div class="mb-4 text-center">
+                <h2 class="display-6 fw-600 fs-2"><b>Entertainment</b></h2>
+            </div>
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-5 g-4 justify-content-center">
+
+                <!-- yt prem -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="#" title="Youtube Premium">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="assets/images/game/yt-prem.jpg" class="card-img-top" title="Youtube Premium">
+                            </div>
+                            <div class="row card-body text-center align-items-center g-0">
+                                <div class="col-12">
+                                    <h3 class="fs-6 fw-600 mb-0 entry-title" style="font-size: 1.08rem;">
+                                        Youtube Premium</h3>
+                                    <div class="fs-6 text-muted mt-0">
+                                        <div>Youtube</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end yt prem -->
+
+            </div>
+        </div>
+        <!-- end entertainment -->
+    </div>
+    <br><br>
+    <!-- deskripsi -->
+    <div class="bg-primary bg-gradient">
+        <div class="container">
+            <div class="py-4 text-white">
+                <h2 class="display-6 fw-600 fs-5">
+                    <b>AsdarrID: Top-up Produk Digital Legal, Murah, Cepat, dan Aman.</b>
+                </h2>
+                <p class="fs-6 m-0">Tempat top-up game dan voucher termurah dan terpercaya. Beli Voucher Digital dalam
+                    satu website dengan harga terbaik, banyak bonus dan promo diskon paling murah langsung dalam satu
+                    websites.</p>
+            </div>
+        </div>
+    </div>
+    <!-- end deskripsi -->
+
+    <div class="footer mt-auto border-top">
+        <!-- metode pembayaran yang didukung -->
+        <div class="container">
+            <div class="col-md-12 col-12">
+                <div class="row pt-4">
+                    <div class="col-md-12 text-center mb-3">
+                        <h5 class="mb-1">Didukung Pembayaran</h5>
+                    </div>
+                    <div class="text-center list-support-payment">
+                        <img src="assets/images/payment/bca.svg">
+                        <img src="assets/images/payment/bni.svg">
+                        <img src="assets/images/payment/bri.svg">
+                        <img src="assets/images/payment/mandiri.svg">
+                        <img src="assets/images/payment/alfamart.svg">
+                        <img src="assets/images/payment/indomaret.svg">
+                        <img src="assets/images/payment/alfamidi.svg">
+                        <img src="assets/images/payment/gopay.svg">
+                        <img src="assets/images/payment/linkaja.svg">
+                        <img src="assets/images/payment/shopeepay.svg">
+                        <img src="assets/images/payment/ovo.svg">
+                        <img src="assets/images/payment/dana.svg">
+                        <img src="assets/images/payment/qris.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end pembayaran -->
+
+        <footer>
+            <div class="container">
+                <div class="row pt-5 pb-4 mt-4 border-top justify-content-center">
+
+                    <div class="col-lg-3 col-6">
+                        <h5>Sitelinks</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#Game" class="nav-link p-0 text-muted">Game</a></li>
+                            <li class="nav-item mb-2"><a href="#Voucher" class="nav-link p-0 text-muted">Voucher</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#Entertainment"
+                                    class="nav-link p-0 text-muted">Entertainment</a></li>
+                            <br>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+                        <h5>Ikuti Kami</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a href="https://www.facebook.com/profile.php?id=100055745330328" target="_blank"
+                                    class="nav-link p-0 text-muted">Facebook</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="https://instagram.com/asdarr.id?igshid=YmMyMTA2M2Y=" target="_blank"
+                                    class="nav-link p-0 text-muted">Instagram</a>
+                            </li>
+                            <br>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+                        <h5>AsdarrID</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Tentang Kami</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Syarat & Ketentuan</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+                        <h5>Kontak Kami</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted">Jakarta Barat</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="https://wa.me/6283123658885" target="_blank"
+                                    class="nav-link p-0 text-muted">+6283-123-65-8885</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2022</p>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,42 @@
+body{
+    font-family:source sans pro,sans-serif;
+    background-color:#f8fafd;
+}
+
+.cmb-header-shadow{
+    box-shadow:0 1px 10px #617d901c;
+}
+
+.cbm-section-shadow{
+    box-shadow:0 3px 15px #63809e1f;
+}
+
+.nav-link{
+    color: black;
+}
+
+.cbm-main-menu ul li a:hover {
+    color: #1774fd;
+  }
+
+.wrap {
+    max-width: 1100px;
+    margin: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 2rem;
+}
+
+.container{
+    max-width:1030px;
+}
+
+.list-support-payment img{
+    height:33px;
+    margin:3px 0;
+    padding:8px
+}
+
+.footer-copyright{
+    text-align:center;
+}
