@@ -1,9 +1,9 @@
 1. DONE
 
 2. button payment ada warnanya
-3. keterangan tf 3 digit ganti warna
+3. DONE
 4. DONE
-5. page riwayat transaksi
+5. page riwayat transaksi (on progress)
 6. page profile 
 7. duplikat produk (total 24, baru 1) -> syarat no 2 
 8. duplikat payment method (total 13, baru 1) -> syarat no 3,4
