@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/table.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
@@ -75,8 +76,150 @@
     </div>
 
     <div class="" onclick="closeRightMenu()">
+        <div class="container">
         <!-- isi riwayat -->
         
+        <!-- Tampilan Tabel Data -->
+    <main>
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th> Nomor Transaksi </th>
+              <th> Tanggal </th>
+              <th> Nominal </th>
+              <th> Detail </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>
+                <a href="#" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa-solid fa-magnifying-glass"></i> 12346 </a> </td>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Detail</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <ul>
+                          <li style="list-style-type: none;"> Nomor Transaksi : 12346 </li>
+                          <li style="list-style-type: none;"> Tanggal : 08/09/2022 </li>
+                          <li style="list-style-type: none;"> Nama Pengguna : Chunchunmadu </li>
+                          <li style="list-style-type: none;"> Metode Pembayaran : Dana </li>
+                          <li style="list-style-type: none;"> Nominal : Rp.1.000.000 </li>
+                          <li style="list-style-type: none;"> Status : Belum Dibayar </li>
+                        </ul>
+                      </div>  
+                      <br>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td> 08/09/2022 </td>
+              <td> Rp.1.000.000 </td>
+              <td class="text-primary"> sudah bayar </td>
+            </tr>
+
+            <tr >
+              <td>
+                <a href="#" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa-solid fa-magnifying-glass"></i> 12346 </a> </td>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Detail</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <ul>
+                          <li style="list-style-type: none;"> Nomor Transaksi : 12346 </li>
+                          <li style="list-style-type: none;"> Tanggal : 08/09/2022 </li>
+                          <li style="list-style-type: none;"> Nama Pengguna : Chunchunmadu </li>
+                          <li style="list-style-type: none;"> Metode Pembayaran : Dana </li>
+                          <li style="list-style-type: none;"> Nominal : Rp.1.000.000 </li>
+                          <li style="list-style-type: none;"> Status : Belum Dibayar </li>
+                        </ul>
+                      </div>  
+                      <br>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td> 08/09/2022 </td>
+              <td> Rp.1.000.000 </td>
+              <td class="text-danger"> Belum Bayar </td>
+            </tr>
+
+            <tr >
+              <td>
+              <a href="#" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa-solid fa-magnifying-glass"></i> 12346 </a> </td>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Detail</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <ul>
+                          <li style="list-style-type: none;"> Nomor Transaksi : 12346 </li>
+                          <li style="list-style-type: none;"> Tanggal : 08/09/2022 </li>
+                          <li style="list-style-type: none;"> Nama Pengguna : Chunchunmadu </li>
+                          <li style="list-style-type: none;"> Metode Pembayaran : Dana </li>
+                          <li style="list-style-type: none;"> Nominal : Rp.1.000.000 </li>
+                          <li style="list-style-type: none;"> Status : Belum Dibayar </li>
+                        </ul>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td> 08/09/2022 </td>
+              <td> Rp.1.000.000 </td>
+              <td class="text-warning"> Siap Dikirim </td>
+            </tr>
+
+            <tr >
+              <td>
+                <a href="#" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa-solid fa-magnifying-glass"></i> 12346 </a> </td>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Detail</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <ul>
+                          <li style="list-style-type: none;"> Nomor Transaksi : 12346 </li>
+                          <li style="list-style-type: none;"> Tanggal : 08/09/2022 </li>
+                          <li style="list-style-type: none;"> Nama Pengguna : Chunchunmadu </li>
+                          <li style="list-style-type: none;"> Metode Pembayaran : Dana </li>
+                          <li style="list-style-type: none;"> Nominal : Rp.1.000.000 </li>
+                          <li style="list-style-type: none;"> Status : Belum Dibayar </li>
+                        </ul>
+                      </div>  
+                      <br>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td> 08/09/2022 </td>
+              <td> Rp.1.000.000 </td>
+              <td class="text-success"> selesai </td>
+            </tr>
+          </tbody>
+        </table>
+    </table>
+  </table>
+</main>
+</div>
         <!-- end riwayat -->
     </div>
     <br><br>
