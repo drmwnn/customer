@@ -1,42 +1,414 @@
 body{
-    font-family:source sans pro,sans-serif;
+    font-family:source sans pro,sans-serif!important;
     background-color:#f8fafd;
 }
-
+/* 28 in */
 .cmb-header-shadow{
-    box-shadow:0 1px 10px #617d901c;
+    box-shadow:0 1px 10px #0000001c;
 }
-
-.cbm-section-shadow{
-    box-shadow:0 3px 15px #63809e1f;
+/* 29 in */
+.container{
+    max-width:1030px;
+    
 }
-
-.nav-link{
+nav ul{
+    columns: 12;
+    column-width: auto;
+    justify-content: center;
+}
+.proff{
+    display: none;
+}
+.profil-img{
     color: black;
 }
+.sidebar-menu{
+    display: none;
+}
+/* 42 in menu nav */
+.nav-link{
+    color:black;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+}
+.nav-link:hover{
+    color: black !important;;
+}
 
-.cbm-main-menu ul li a:hover {
-    color: #1774fd;
-  }
+.nav-link:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+.nav-link:hover:after {
+    width: 100%;
+    background: black;
+}
+.home,
+.game,
+.voucher,
+.entertainment{
+    text-decoration-line: underline ;
+    text-underline-offset: 8px;
+}
 
-.wrap {
+
+  /* 62 in image slider */
+  .wrap {
     max-width: 1100px;
     margin: auto;
     padding-left: 2rem;
     padding-right: 2rem;
     margin-top: 2rem;
 }
-
-.container{
-    max-width:1030px;
+/* 108 in */
+.cbm-section-shadow{
+    box-shadow:0 3px 15px #63809e1f;
 }
-
+/* 112 card produk */
+.card-body {
+    border-radius: 10px;
+    background-color: white;
+}
+/* 703 in img payment bawah */
 .list-support-payment img{
     height:33px;
     margin:3px 0;
     padding:8px
 }
 
+/* 777 in foot */
 .footer-copyright{
     text-align:center;
 }
+
+/* ################ */
+
+/* 78 pr gplay,appstore,web  */
+.product_link_store{
+    margin-top:13px;
+    overflow:hidden;
+    margin-left:-5px;
+    margin-right:-7px;
+    display:flex;
+}
+.item_link_store{
+    display:inline-block;
+    margin:0 5px;
+}
+.item_link_store .item_link_website{
+    font-size:12px;
+    background:#000;
+    border-radius:6px;
+    color:#fff;
+    padding:5px 11px;
+    line-height:12px;
+    font-weight:500;
+    text-decoration:none;
+}
+.item_link_store .item_link_website .web_title{
+    font-size:11px;
+}
+.item_link_store .item_link_website img{
+    height:20px!important;
+}
+.item_link_store:last-child{
+    margin-right:0;
+}
+.item_link_store img{
+    height:34px!important;
+}
+
+/* 108 pr des produk */
+.single-product .product-description p:last-child{
+    margin-bottom:0;
+}
+.single-product .product-description ol{
+    margin-bottom:0;
+}
+
+/* ukuran judul produk */
+.entry-title{
+        font-size: large;
+        margin: 0;
+    }
+    .text-muted{
+        font-size: medium;
+        margin: 0;
+    }
+
+/* 161 pr cara top up */
+.product-how-to-top-up{
+    border:1px solid #b2c7d5;
+    margin-top:39px;
+}
+.product-how-to-top-up h6{
+    position:absolute;
+    top:-14px;
+    left:13px;
+    background:#f8fafd;
+    padding:0 10px;
+    font-weight:600;
+    font-size:21px;
+    text-transform:uppercase;
+}
+.product-how-to-top-up ol li{
+    font-size:15px;
+    margin-bottom:6px;
+}
+.product-how-to-top-up ol{
+    margin-bottom:0;
+    padding-left:20px;
+    padding-top:11px
+}
+
+/* 183 pr form order */
+.product-form-input-order h4{
+    font-size:21px;
+    
+}
+
+/* 186 pr buletan pada nomor form */
+.number-form{
+    font-size:20px;
+    background:#1b77fd;
+    color:#fff;
+    width:37px;
+    height:37px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    align-content:center;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    border:5px solid #fff
+}
+
+/* 194 pr cek user id */
+.where-my-user-id{
+    color:#1b77fd;cursor:pointer;
+}
+.content-agent-topup small.where-my-user-id{
+    font-size:13px;
+}
+
+/* 214 pr ukuran image user id */
+.modal-body img{
+    width: 100%;
+}
+
+/* 240 pr button denom */
+.btn-check{
+    border-color: #1774fd;
+}
+
+/* 330 pr border luar tiap payment */
+.child-box{
+    border:1px solid #e6ebef;
+    margin-bottom:18px;
+    border-radius:7px!important;
+    background:#fff
+}
+
+/* 331 pr head payment */
+.child-box .header{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    align-content:center;
+    justify-content:space-between;
+    align-items:center;
+    padding:11px 15px;
+    border-top-left-radius:7px;
+    border-top-right-radius:7px;
+    cursor:pointer;
+    position:relative;
+}
+/* 331 pr ukuran logo payment sblm di klik */
+.child-box .short-payment-support-info img{
+    height:13px;
+    margin:10px 4px;
+}
+
+/* 338 pr tampilan keseluruhan ketika payment draw di klik */
+.child-box .button-action-payment{
+    padding:15px;
+    display:none;
+    border-top:1px solid #ced4da;
+}
+
+/* 339 pr tampilan payment keseluruhan ketika payment draw di klik */
+.button-action-payment .list-payment-method{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+/* 345 pr box payment method */
+.button-action-payment .payment-method{
+    border:1px solid #e6ebef;
+    padding:10px;
+    border-radius:.3em;
+    margin-bottom:10px;
+}
+.btn.btn-outline.payment-method{
+    display:block;
+    align-content:center;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* 347 pr garis diantara logo dan nama payment */
+.button-action-payment .info-top{
+    border-bottom:1px solid #e6ebef;
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+    padding-bottom:14px;
+    padding-top:5px;
+    align-items:center;
+}
+
+/* 348 pr ukuran gambar metode pembayaran */
+.button-action-payment .info-top img{
+    height:20px;
+    object-fit:contain;
+}
+
+/* 353 pr keterangan nama payment method */
+.button-action-payment .info-bottom{
+    font-size:12px;
+    color:#767676
+}
+
+/* 399 pr logo payment sblm di klik */
+.short-payment-support-info-container{
+    display:flex;
+    height:35px;
+    padding:0 0;
+    cursor:pointer;
+    overflow:hidden;
+    -webkit-box-pack:end;
+    justify-content:flex-end;
+    position:relative;
+    border-bottom-left-radius:7px;
+    border-bottom-right-radius:7px;
+    border-top:1px solid #e6ebef;
+}
+
+/* 406 pr panah arah draw */
+.open-button-action-payment{
+    color:#414141;
+    font-size:13px;
+    margin-left:10px;
+    margin-right:16px;
+    display:flex;
+    align-items:center;
+    text-decoration: none;
+}
+
+/* ########## */
+
+/* 67 py keterangan pembayaran*/
+.payment-notice-top{
+    margin-bottom:9px
+}
+.payment-notice-top p{
+    margin-bottom:0;
+    font-size:14px
+}
+
+/* 73 py total harga */
+.total-bill-price{
+    position:relative;
+    font-size:38px
+}
+.total-bill-price i.fas{
+    font-size:16px;
+    margin-left:11px
+}
+.total-bill-price .pay-code-unique{
+    color:#1b77fd
+}
+div#total-bill.bank_transfer{
+    margin-bottom:49px
+}
+
+/* 78 py keterangan tf 3 digit */
+.floating-bottom{
+    position: center;
+    font-size:14px;
+    background:#1b77fd;
+    color:#fff;
+    font-weight:400;
+    padding:5px;
+    border-radius:.5em;
+    padding-left:15px;
+    padding-right:15px;
+    text-align:center;
+    margin-top:0;
+    width:338px;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+/* navbar */
+@media screen and (max-width:767.9px){
+    .log-img,
+    #navbar-menu{
+        display: none;
+    }
+    .sidebar-menu{
+        display: block;
+    }
+    .d-flex{
+        justify-content: space-between!important;
+    }
+}
+/* text produk */
+@media screen and (max-width:800px){
+    .entry-title{
+        font-size: medium;
+        margin: 0;
+    }
+    .text-muted{
+        font-size: 100%;
+        margin: 0;
+    }
+}
+@media screen and (max-width:500px){
+    .text-muted,
+    .entry-title{
+        font-size: small;
+        margin: 0;
+    }
+}
+@media screen and (max-width:350px){
+    .text-muted,
+    .entry-title{
+        font-size: x-small;
+        margin: 0;
+    }
+}
+
+/* img slider */
+@media screen and (max-width:767.9px){
+    .wrap {
+        max-width: 100%!important;
+        margin: auto;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: 2rem;
+    }
+}
+
+

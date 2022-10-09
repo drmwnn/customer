@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/logo/shorcut.png" />
+
+    <!-- CSS only bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- end -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <title>AsdarrID - Entertainment</title>
+</head>
+
+<body>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;line-height: 50%;"
+        id="rightMenu">
+        <button onclick="closeRightMenu()" class=" w3-button w3-large"><svg xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg></button>
+        <div style="line-height: 70%;">
+            <a href="../index.html" class="w3-bar-item w3-button" style="text-align: right;">Home</a>
+            <a href="../kategori/game.html" class="w3-bar-item w3-button" style="text-align: right;">Game</a>
+            <a href="../kategori/Voucher.html" class="w3-bar-item w3-button" style="text-align: right;">Voucher</a>
+            <a href="../kategori/Entertainment.html" class="w3-bar-item w3-button"
+                style="text-align: right;margin-bottom: 5px;">Entertainment</a>
+        </div>
+        <div class="w3-border-top" style="line-height: 70%;">
+            <a href="../member/masuk.html" class="w3-bar-item w3-button"
+                style="text-align: right;margin-top: 5px;">Masuk</a>
+            <a href="../member/daftar.html" class="w3-bar-item w3-button" style="text-align: right;">Daftar</a>
+        </div>
+    </div>
+    <div class="cmb-header-shadow">
+        <div class="container">
+            <header class="d-flex align-items-center justify-content-center justify-content-md-between py-3">
+                <!-- logo -->
+                <a href="../index.html" class="d-flex align-items-center">
+                    <img src="../assets/images/logo/logo-a.png" class="logo" alt=".." height="40">
+                </a>
+                <!-- end logo -->
+                <nav class="cbm-main-menu" id="navbar-menu">
+                    <ul class="nav fs-5 navbar-brand">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="../kategori/game.html" class="nav-link">Game</a></li>
+                        <li><a href="../kategori/Voucher.html" class="nav-link">Voucher</a></li>
+                        <li><a href="../kategori/Entertainment.html" class="nav-link entertainment">Entertainment</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- button masuk/daftar -->
+                <div class="text-end">
+                    <a href="../member/masuk.html" class="btn btn-outline-primary me-2 flex-shrink-0 log-img">Masuk</a>
+                    <a href="../member/daftar.html" class="btn btn-primary log-img" style="color: white;">Daftar</a>
+                    <button class="btn btn-light sidebar-menu" type="button"><img src="../assets/images/logo/menu.png"
+                            alt="user" width="20" onclick="openRightMenu();">
+                </div>
+                <!-- end button -->
+            </header>
+        </div>
+    </div>
+
+    <div class="site-main" onclick="closeRightMenu()">
+        <!-- image slider -->
+        <div class="wrap">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators" id="indikator">
+                    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="../assets/images/slide/1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="../assets/images/slide/2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../assets/images/slide/3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+                <button class="carousel-control-next" id="control-nxt" type="button"
+                    data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+            </div>
+        </div>
+        <!-- end image slider -->
+        <br>
+        <!-- Entertainment -->
+        <div class="container" id="Entertainment">
+            <br>
+            <div class="mb-3 text-center">
+                <h2 class="display-6 fw-600 fs-2"><b>Entertainment</b></h2>
+            </div>
+            <div class="row row-cols-3 row-cols-md-5 g-3 justify-content-center">
+
+                <!-- Youtube Premium -->
+                <article>
+                    <a class="text-decoration-none text-reset" href="../produk/C01-yt.html" title="Youtube Premium">
+                        <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                            <div class="card-img-relative">
+                                <img src="../assets/images/game/yt-prem.jpg" class="card-img-top"
+                                    title="Youtube Premium">
+                            </div>
+                            <div class="row card-body text-center align-items-center">
+                                <div class="col-12">
+                                    <h3 class="entry-title">Youtube Premium</h3>
+                                    <div class="text-muted">
+                                        <div>Manual</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- end Saga of Skywalkers -->
+
+            </div>
+        </div>
+        <!-- end entertainment -->
+    </div>
+    <br><br>
+    <!-- deskripsi -->
+    <div class="bg-primary bg-gradient">
+        <div class="container">
+            <div class="py-4 text-white desc">
+                <h2 class="display-6 fw-600 fs-5">
+                    <b>AsdarrID: Top-up Produk Digital Legal, Murah, Cepat, dan Aman.</b>
+                </h2>
+                <p class="fs-6 m-0">Tempat top-up game dan voucher termurah dan terpercaya. Beli Voucher Digital dalam
+                    satu website dengan harga terbaik, banyak bonus dan promo diskon paling murah langsung dalam satu
+                    websites.</p>
+            </div>
+        </div>
+    </div>
+    <!-- end deskripsi -->
+
+    <div class="footer mt-auto border-top">
+        <!-- metode pembayaran yang didukung -->
+        <div class="container">
+            <div class="col-md-12 col-12">
+                <div class="row pt-4">
+                    <div class="col-md-12 text-center mb-3">
+                        <h5 class="mb-1">Didukung Pembayaran</h5>
+                    </div>
+                    <div class="text-center list-support-payment">
+                        <img src="../assets/images/payment/bca.svg">
+                        <img src="../assets/images/payment/bni.svg">
+                        <img src="../assets/images/payment/bri.svg">
+                        <img src="../assets/images/payment/mandiri.svg">
+                        <img src="../assets/images/payment/alfamart.svg">
+                        <img src="../assets/images/payment/indomaret.svg">
+                        <img src="../assets/images/payment/alfamidi.svg">
+                        <img src="../assets/images/payment/gopay.svg">
+                        <img src="../assets/images/payment/linkaja.svg">
+                        <img src="../assets/images/payment/shopeepay.svg">
+                        <img src="../assets/images/payment/ovo.svg">
+                        <img src="../assets/images/payment/dana.svg">
+                        <img src="../assets/images/payment/qris.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end pembayaran -->
+
+        <footer>
+            <div class="container">
+                <div class="row pt-5 pb-4 mt-4 border-top justify-content-center">
+
+                    <div class="col-lg-3 col-6">
+                        <h5>Sitelinks</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="../kategori/game.html"
+                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Game</a></li>
+                            <li class="nav-item mb-2"><a href="../kategori/Voucher.html"
+                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Voucher</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="../kategori/Entertainment.html"
+                                    class="text-decoration-none p-0 text-muted"
+                                    style="font-size: medium;">Entertainment</a></li>
+                            <br>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+                        <h5>Ikuti Kami</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a href="https://www.facebook.com/profile.php?id=100055745330328" target="_blank"
+                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Facebook</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="https://instagram.com/asdarr.id?igshid=YmMyMTA2M2Y=" target="_blank"
+                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Instagram</a>
+                            </li>
+                            <br>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+                        <h5>AsdarrID</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="../tentang-kami.html"
+                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Tentang
+                                    Kami</a></li>
+                            <li class="nav-item mb-2"><a href="../s&k.html" class="text-decoration-none p-0 text-muted"
+                                    style="font-size: medium;">Syarat &
+                                    Ketentuan</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+                        <h5>Kontak Kami</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a class="text-decoration-none p-0 text-muted"
+                                    style="font-size: medium;">Jakarta Barat</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="https://wa.me/6283123658885" target="_blank"
+                                    class="text-decoration-none p-0 text-muted"
+                                    style="font-size: medium;">+6283-123-65-8885</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2022</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</body>
+
+</html>

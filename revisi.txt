@@ -1,0 +1,11 @@
+1. navbar - sidebar - Kompleksitas DONE
+
+2. button payment ada warnanya
+3. keterangan tf 3 digit ganti warna
+4. button cara bayar
+5. page riwayat transaksi
+6. page profile 
+7. duplikat produk (total 24, baru 1) -> syarat no 2 
+8. duplikat payment method (total 13, baru 1) -> syarat no 3,4
+9. tentang kami 
+10. kebijakan privasi
