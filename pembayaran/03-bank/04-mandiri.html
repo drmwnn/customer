@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/images/logo/shorcut.png" />
+
+    <!-- CSS only bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- end -->
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
+    <!-- end -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <title>Pembayaran</title>
+</head>
+
+<body>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;line-height: 50%;"
+        id="rightMenu">
+        <button onclick="closeRightMenu()" class=" w3-button w3-large"><svg xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg></button>
+        <div style="line-height: 70%;">
+            <a href="../../index.html" class="w3-bar-item w3-button" style="text-align: right;">Home</a>
+            <a href="../../kategori/game.html" class="w3-bar-item w3-button" style="text-align: right;">Game</a>
+            <a href="../../kategori/Voucher.html" class="w3-bar-item w3-button" style="text-align: right;">Voucher</a>
+            <a href="../../kategori/Entertainment.html" class="w3-bar-item w3-button"
+                style="text-align: right;margin-bottom: 5px;">Entertainment</a>
+        </div>
+        <div class="w3-border-top" style="line-height: 70%;">
+            <a href="../../member/masuk.html" class="w3-bar-item w3-button"
+                style="text-align: right;margin-top: 5px;">Masuk</a>
+            <a href="../../member/daftar.html" class="w3-bar-item w3-button" style="text-align: right;">Daftar</a>
+        </div>
+    </div>
+    <div class="cmb-header-shadow">
+        <div class="container">
+            <header class="d-flex align-items-center justify-content-center justify-content-md-between py-3">
+                <!-- logo -->
+                <a href="../../index.html" class="d-flex align-items-center">
+                    <img src="../../assets/images/logo/logo-a.png" class="logo" alt=".." height="40">
+                </a>
+                <!-- end logo -->
+                <nav class="cbm-main-menu" id="navbar-menu">
+                    <ul class="nav fs-5 navbar-brand">
+                        <li><a href="../../index.html" class="nav-link">Home</a></li>
+                        <li><a href="../../kategori/game.html" class="nav-link">Game</a></li>
+                        <li><a href="../../kategori/Voucher.html" class="nav-link">Voucher</a></li>
+                        <li><a href="../../kategori/Entertainment.html" class="nav-link">Entertainment</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- button masuk/daftar -->
+                <div class="text-end">
+                    <a href="../../member/masuk.html"
+                        class="btn btn-outline-primary me-2 flex-shrink-0 log-img">Masuk</a>
+                    <a href="../../member/daftar.html" class="btn btn-primary log-img" style="color: white;">Daftar</a>
+                    <button class="btn btn-light sidebar-menu" type="button"><img
+                            src="../../assets/images/logo/menu.png" alt="user" width="20" onclick="openRightMenu();">
+                </div>
+                <!-- end button -->
+            </header>
+        </div>
+    </div>
+
+    <div class="site-main" onclick="closeRightMenu()">
+
+        <!--  -->
+        <div class="single-product py-5">
+            <div class="container">
+                <div class="row g-0 bg-white cbm-section-shadow rounded-3">
+                    <div class="col-md-7 col-lg-8 border-end p-5 order-payment-info-section">
+                        <div class="payment-notice-top text-center">
+                            <h5 class="fw-600"><b>Pembayaran </b><b class="text-primary">#100001</b></h5>
+                            <p>Pastikan anda melakukan pembayaran sebelum melewati batas</p>
+                            <p>pembayaran dan dengan nominal yang tepat</p>
+
+                        </div>
+                        <div id="total-bill" class="text-center bank_transfer">
+                            <div class="total-bill-price">
+                                <div class="amount-bill-price d-flex align-items-center"
+                                    style="justify-content: center!important;">
+                                    <b>Rp10.<span class="pay-code-unique" style="color: red;">815</span> </b>
+                                </div>
+                                <h5 style="color: red;"><b>Harap transfer sampai 3 digit terakhir!</b></h5>
+
+
+                            </div>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
+                                    <h6 class="mb-0 text-muted">Nomor Transaksi</h6>
+                                    <p class="mb-0 fw-600">#100001</p>
+                                </div>
+                            </div>
+                            <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
+                                    <h6 class="mb-0 text-muted">Status Pembayaran</h6>
+                                    <p class="mb-0 border border-warning text-warning badge text-wrap">Belum Dibayar</p>
+                                </div>
+                            </div>
+                            <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
+                                    <h6 class="mb-0 text-muted">Status Transaksi</h6>
+                                    <p class="mb-0 border border-warning text-warning badge text-wrap">Belum Diproses
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="payment-gateway-detail">
+                                <div class="mb-3" id="countdown-container">
+                                    <div class="text-center">
+                                        <div class="title-countdown"><b>Batas Waktu Pembayaran</b></div>
+                                        <b class="countdown fs-4 text-primary" id="countdown"></b>
+                                    </div>
+                                </div>
+                                <div class="mb-3" id="countdown-container">
+                                    <div class="text-center">
+                                        <label for="Image" class="form-label"><b>Upload Bukti Pembayaran</b></label>
+                                        <input class="form-control" type="file" id="formFile"
+                                            accept="image/jpeg,image/jpg,image/png">
+                                        <br>
+                                        <a href="../02-verifikasi.html" class="btn btn-primary"
+                                            onclick="return payValidation();">Upload</a>
+                                    </div>
+                                </div>
+                                <div class="list-group mb-0">
+                                    <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                        <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
+                                            <h6 class="mb-0 text-muted">Total Pembayaran</h6>
+                                            <p class="mb-0">Rp10.815</p>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                        <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
+                                            <h6 class="mb-0 text-muted">Biaya Layanan</h6>
+                                            <p class="mb-0">Rp0 </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                        <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
+                                            <h6 class="mb-0 text-muted">Metode Pembayaran</h6>
+                                            <div class="mb-0 text-right">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <div class="me-2"><img src="../../assets/images/payment/mandiri.svg"
+                                                            width="auto" height="15px" /></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                        <div class="d-flex gap-2 w-100 justify-content-between">
+                                            <h6 class="mb-0 text-muted">No Rekening</h6>
+                                            <p class="mb-0"><b>1650002006337</b></p>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                        <div class="d-flex gap-2 w-100 justify-content-between">
+                                            <h6 class="mb-0 text-muted">Atas Nama</h6>
+                                            <p class="mb-0">
+                                                Asep Darmawan </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                        <div class="d-flex gap-2 w-100 justify-content-between">
+                                            <h6 class="mb-0 text-muted">Cabang</h6>
+                                            <p class="mb-0">
+                                                - </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3 align-items-center">
+
+                                <div class="col-lg-12 float-end text-end">
+                                    <button type="button" class="btn btn-warning btn-cara-bayar" data-bs-toggle="modal"
+                                        data-bs-target="#carabayarModal">
+                                        <i class="fas fa-info"></i> Cara Bayar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-lg-4 order-md-last">
+                        <div class="card border-0 mb-4">
+                            <div class="card-body">
+                                <div class="d-flex gap-3 align-items-center mb-3">
+                                    <div class="thumbnail-product">
+                                        <img src="https://play-lh.googleusercontent.com/caDiIvFl-VDvEPlzbHuypmXMTIwAiA8WesvsUIcFoQqokLaYRSYh-Y0LpR4RFhGgytEg=s100-rw"
+                                            alt="" class="rounded-3" height="100px">
+                                    </div>
+                                    <div class="product-data">
+                                        <h1 class="fs-5 mb-1">Arena of Valor</h1>
+                                        <div class="fs-6 text-muted">Garena</div>
+                                    </div>
+                                </div>
+                                <div class="list-group list-group-flush">
+                                    <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                        <div class="d-flex gap-2 w-100 justify-content-between">
+                                            <div>
+                                                <h6 class="mb-0 text-muted">User ID</h6>
+                                                <p class="mb-0">692768360760477</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                        <div class="d-flex gap-2 w-100 justify-content-between">
+                                            <div>
+                                                <h6 class="mb-0 text-muted">Item</h6>
+                                                <p class="mb-0">40 Vouchers</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                        <div class="d-flex gap-2 w-100 justify-content-between">
+                                            <div>
+                                                <h6 class="mb-0 text-muted">Waktu Pemesanan</h6>
+                                                <p class="mb-0">25 September 2022 10:29 WIB</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-top pt-4 need-help-section">
+                                    <h6><strong><i class="fas fa-headset"></i> Butuh Bantuan?</strong></h6>
+                                    <p style="font-size: 0.9rem; ">Apabila anda membutuhkan
+                                        bantuan terkait hal apapun,
+                                        silahkan hubungi <a href="https://wa.me/6283123658885" target="_blank"
+                                            style="text-decoration: none;color: #0d6efd;">Customer Support kami via
+                                            WhatsApp</a> atau kirim email ke <a href="mailto:asdarrid.cs@gmail.com"
+                                            style="text-decoration: none;color: #0d6efd;"><span>asdarrid.cs@gmail.com</span></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="carabayarModal" tabindex="-1" aria-labelledby="carabayarModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title">
+                            <div class="d-flex flex-row align-items-center">
+                                <div class="fw-bold">
+                                    Petunjuk Pembayaran MANDIRI</div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <a></a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var distance = 86399000;
+            var x = setInterval(function () {
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML = hours + " jam " +
+                    minutes + " menit " + seconds + " detik ";
+
+                console.log(hours + "h " +
+                    minutes + "m " + seconds + "s ");
+
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                }
+                distance = distance - 1000;
+            }, 1000);
+
+            function payValidation() {
+                if (document.getElementById('formFile').value == "") {
+                    alert("Upload Bukti pembayaran!");
+                    document.getElementById('formFile').focus();
+                    return false;
+                }
+            }
+        </script>
+    </div>
+    <br><br>
+    <!-- deskripsi -->
+    <div class="bg-primary bg-gradient">
+        <div class="container">
+            <div class="py-4 text-white">
+                <h2 class="display-6 fw-600 fs-5">
+                    <b>AsdarrID: Top-up Produk Digital Legal, Murah, Cepat, dan Aman.</b>
+                </h2>
+                <p class="fs-6 m-0">Tempat top-up game dan voucher termurah dan terpercaya. Beli Voucher Digital dalam
+                    satu website dengan harga terbaik, banyak bonus dan promo diskon paling murah langsung dalam satu
+                    websites.</p>
+            </div>
+        </div>
+    </div>
+    <!-- end deskripsi -->
+
+    <div class="footer mt-auto border-top">
+        <!-- metode pembayaran yang didukung -->
+        <div class="container">
+            <div class="col-md-12 col-12">
+                <div class="row pt-4">
+                    <div class="col-md-12 text-center mb-3">
+                        <h5 class="mb-1">Didukung Pembayaran</h5>
+                    </div>
+                    <div class="text-center list-support-payment">
+                        <img src="../../assets/images/payment/bca.svg">
+                        <img src="../../assets/images/payment/bni.svg">
+                        <img src="../../assets/images/payment/bri.svg">
+                        <img src="../../assets/images/payment/mandiri.svg">
+                        <img src="../../assets/images/payment/alfamart.svg">
+                        <img src="../../assets/images/payment/indomaret.svg">
+                        <img src="../../assets/images/payment/alfamidi.svg">
+                        <img src="../../assets/images/payment/gopay.svg">
+                        <img src="../../assets/images/payment/linkaja.svg">
+                        <img src="../../assets/images/payment/shopeepay.svg">
+                        <img src="../../assets/images/payment/ovo.svg">
+                        <img src="../../assets/images/payment/dana.svg">
+                        <img src="../../assets/images/payment/qris.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end pembayaran -->
+
+        <footer>
+            <div class="container">
+                <div class="row pt-5 pb-4 mt-4 border-top justify-content-center">
+
+                    <div class="col-lg-3 col-6">
+                        <h5>Sitelinks</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="../../kategori/game.html"
+                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Game</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="../../kategori/Voucher.html"
+                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Voucher</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="../../kategori/Entertainment.html"
+                                    class="text-decoration-none p-0 text-muted"
+                                    style="font-size: medium;">Entertainment</a></li>
+                            <br>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+                        <h5>Ikuti Kami</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a href="https://www.facebook.com/profile.php?id=100055745330328" target="_blank"
+                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Facebook</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="https://instagram.com/asdarr.id?igshid=YmMyMTA2M2Y=" target="_blank"
+                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Instagram</a>
+                            </li>
+                            <br>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+                        <h5>AsdarrID</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="../../tentang-kami.html"
+                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Tentang
+                                    Kami</a></li>
+                            <li class="nav-item mb-2"><a href="../../kebijakan-privasi.html"
+                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Kebijakan
+                                    Privasi</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+                        <h5>Kontak Kami</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a class="text-decoration-none p-0 text-muted"
+                                    style="font-size: medium;">Jakarta Barat</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="https://wa.me/6283123658885" target="_blank"
+                                    class="text-decoration-none p-0 text-muted"
+                                    style="font-size: medium;">+6283-123-65-8885</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2022</p>
+            </div>
+        </footer>
+    </div>
+    <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>
