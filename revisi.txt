@@ -1,12 +1,10 @@
 1. DONE
-
-2. button payment ada warnanya
+2. DONE
 3. DONE
 4. DONE
-5. page riwayat transaksi (on progress)
-6. page profile 
-7. duplikat produk (total 24, baru 1) -> syarat no 2 
-8. duplikat payment method (total 13, baru 1) -> syarat no 3,4
-
-9.  DONE
-10.  DONE
+5. DONE
+6. DONE
+7. duplikat produk (total 24, baru 1) -> on progress
+8. DONE
+9. DONE
+10.DONE
