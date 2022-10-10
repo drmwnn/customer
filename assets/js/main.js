@@ -55,7 +55,7 @@ function radioValidation() {
         }
     }
     if (!nomValue) {
-        alert("Pilih Nominal Order");
+        alert("Pilih Jumlah");
         return false;
     }
 

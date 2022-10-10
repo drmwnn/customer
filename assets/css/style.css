@@ -176,7 +176,7 @@ nav ul{
 /* 186 pr buletan pada nomor form */
 .number-form{
     font-size:20px;
-    background:#1b77fd;
+    background:black;
     color:#fff;
     width:37px;
     height:37px;
@@ -189,6 +189,7 @@ nav ul{
     border-radius:50%;
     border:5px solid #fff
 }
+
 
 /* 194 pr cek user id */
 .where-my-user-id{
@@ -275,6 +276,7 @@ nav ul{
     align-items:center;
 }
 
+
 /* 348 pr ukuran gambar metode pembayaran */
 .button-action-payment .info-top img{
     height:20px;
@@ -284,7 +286,9 @@ nav ul{
 /* 353 pr keterangan nama payment method */
 .button-action-payment .info-bottom{
     font-size:12px;
-    color:#767676
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 /* 399 pr logo payment sblm di klik */
