@@ -60,7 +60,7 @@ function radioValidation() {
     }
 
     //validasi metode pembayaran
-    var pay = document.getElementsByName('btnradio');
+    var pay = document.getElementsByName('payment');
     var payValue = false;
 
     for (var i = 0; i < pay.length; i++) {
