@@ -1,0 +1,64 @@
+/* untuk tampilan riwayat */
+.riwayat-table {
+  border-top: 1px solid #e0e0e0;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  width: 100%;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.riwayat-table thead tr {
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px;
+}
+
+.thead {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 8px;
+}
+
+.riwayat-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.riwayat-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: blue;
+}
+
+/* untuk box di profile */
+.akun {
+  justify-content: center;
+  margin: 15px;
+}
+
+@media screen and (max-width: 767.9px) {
+  .card-rw {
+    margin-top: 8px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+/* tombol log out */
+.log-out-btn {
+  margin-left: 75%;
+  width: 50%;
+}
