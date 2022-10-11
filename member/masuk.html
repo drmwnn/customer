@@ -53,11 +53,8 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <input type="hidden" name="action" value="login">
-                            <button href="../Index-login.html" id="login-submit"
-                                class="w-100 btn btn-lg btn-primary p-1 fs-6" type="submit">
-                                Masuk
-                            </button>
+                            <a href="../Index-login.html" id="login-submit" class="w-100 btn btn-primary"
+                                onclick="return valMasuk();">Masuk</a>
                         </div>
                         <div class="mt-3 text-muted text-center" style="font-size:0.9rem!important">
                             Belum punya akun? <a href="daftar.html"
@@ -70,6 +67,7 @@
         </div>
     </div>
     </div>
+    <script src="../assets/js/main.js"></script>
     <script>
         function myFunction() {
             var x = document.getElementById("password");

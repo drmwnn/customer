@@ -99,3 +99,20 @@ function closeRightMenu() {
 }
 
 
+function valMasuk() {
+
+    //validasi no
+    if (document.getElementById('phone_number').value == "") {
+        alert("Nomor WhatsApp tidak boleh kosong");
+        document.getElementById('phone_number').focus();
+        return false;
+    }
+
+    //validasi nama
+    if (document.getElementById('password').value == "") {
+        alert("Password tidak boleh kosong");
+        document.getElementById('password').focus();
+        return false;
+    }
+}
+
