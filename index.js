@@ -1,14 +1,39 @@
 const express = require('express');
-const ejs = require('ejs');
+const bodyParser = require('body-parser');
+const session = require('express-session');
+const layouts = require('express-ejs-layouts');
 
-var app = express();
+const app = express();
 
+// set the view engine to ejs
+app.set('view engine', 'ejs'); // Model - View - Controller
+
+// body-parser to parse request body
+app.use(bodyParser.urlencoded()); // req res : request response
+
+// static files
 app.use(express.static('public'));
 
-app.set('view engine', 'ejs');
+// enabling session
+app.use(session({
+    secret: 'some_secret_key',
+    cookie: {}
+}));
+
+// use layouts
+app.use(layouts);
+app.set('layout', 'layouts/main.ejs');
+
+// place all styles block in the layout at the head
+app.set("layout extractStyles", true)
+
+// place all scripts block in the layout at the end
+app.set("layout extractScripts", true)
+
+// routes
+const index = require('./routers/index');
+
+app.use('/', index);
 
 app.listen(4000);
-
-app.get('/', function(req, res) {
-    res.render('pages/index');
-});
+console.log('Server runs at port 4000...');
