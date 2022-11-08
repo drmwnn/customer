@@ -1,0 +1,119 @@
+<link rel="stylesheet" href="assets/css/style.css">
+
+<div class="site-main" onclick="closeRightMenu()">
+    <!-- image slider -->
+    <div class="wrap">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators" id="indikator">
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="assets/images/slide/1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="assets/images/slide/2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/slide/3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"></span>
+            </button>
+            <button class="carousel-control-next" id="control-nxt" type="button"
+                data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"></span>
+            </button>
+        </div>
+    </div>
+    <!-- end image slider -->
+    <br>
+    <!-- Voucher -->
+    <div class="container" id="Voucher">
+        <br>
+        <div class="mb-3 text-center">
+            <h2 class="display-6 fw-600 fs-2"><b>Voucher</b></h2>
+        </div>
+        <div class="row row-cols-3 row-cols-md-5 g-3 justify-content-center">
+
+            <!-- Garena Shell -->
+            <article>
+                <a class="text-decoration-none text-reset" href="garena-shell" title="Garena Shell">
+                    <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                        <div class="card-img-relative">
+                            <img src="assets/images/game/Garena Shell.jpg" class="card-img-top"
+                                title="Garena Shell">
+                        </div>
+                        <div class="row card-body text-center align-items-center">
+                            <div class="col-12">
+                                <h3 class="entry-title">Garena Shell</h3>
+                                <div class="text-muted">
+                                    <div>Manual</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <!-- end Garena Shell -->
+
+            <!-- Minecraft Coins -->
+            <article>
+                <a class="text-decoration-none text-reset" href="minecraft"
+                    title="Minecraft Coins">
+                    <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                        <div class="card-img-relative">
+                            <img src="assets/images/game/Minecraft Coin.webp" class="card-img-top"
+                                title="Minecraft Coins">
+                        </div>
+                        <div class="row card-body text-center align-items-center">
+                            <div class="col-12">
+                                <h3 class="entry-title">Minecraft Coins</h3>
+                                <div class="text-muted">
+                                    <div>Manual</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <!-- end Minecraft Coins -->
+
+            <!-- Smile One -->
+            <article>
+                <a class="text-decoration-none text-reset" href="smile-one" title="Smile One">
+                    <div class="card cbm-section-shadow rounded-3 border-0 h-100 overflow-hidden">
+                        <div class="card-img-relative">
+                            <img src="assets/images/game/Smile One.jpg" class="card-img-top" title="Smile One">
+                        </div>
+                        <div class="row card-body text-center align-items-center">
+                            <div class="col-12">
+                                <h3 class="entry-title">Smile One</h3>
+                                <div class="text-muted">
+                                    <div>Manual</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <!-- end Smile One -->
+
+        </div>
+    </div>
+    <!-- end voucher -->
+</div>
+
+<script src="assets/js/main.js"></script>
+
+<%- contentFor('title') %>
+AsdarrID - Voucher

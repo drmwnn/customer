@@ -1,275 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
+<link rel="stylesheet" href="assets/css/style.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/images/logo/shorcut.png" />
-
-    <!-- CSS only bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <!-- end -->
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
-    </script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap"
-        rel="stylesheet">
-    <title>AsdarrID - Kebijakan Privasi</title>
-</head>
-
-<body>
-    <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;line-height: 50%;"
-        id="rightMenu">
-        <button onclick="closeRightMenu()" class=" w3-button w3-large"><svg xmlns="http://www.w3.org/2000/svg"
-                width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                <path
-                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-            </svg></button>
-        <div style="line-height: 70%;">
-            <a href="index.html" class="w3-bar-item w3-button" style="text-align: right;">Home</a>
-            <a href="kategori/game.html" class="w3-bar-item w3-button" style="text-align: right;">Game</a>
-            <a href="kategori/Voucher.html" class="w3-bar-item w3-button" style="text-align: right;">Voucher</a>
-            <a href="kategori/Entertainment.html" class="w3-bar-item w3-button"
-                style="text-align: right;margin-bottom: 5px;">Entertainment</a>
-        </div>
-        <div class="w3-border-top" style="line-height: 70%;">
-            <a href="member/masuk.html" class="w3-bar-item w3-button"
-                style="text-align: right;margin-top: 5px;">Masuk</a>
-            <a href="member/daftar.html" class="w3-bar-item w3-button" style="text-align: right;">Daftar</a>
-        </div>
-    </div>
-    <div class="cmb-header-shadow">
-        <div class="container">
-            <header class="d-flex align-items-center justify-content-center justify-content-md-between py-3">
-                <!-- logo -->
-                <a href="index.html" class="d-flex align-items-center">
-                    <img src="assets/images/logo/logo-a.png" class="logo" alt=".." height="40">
-                </a>
-                <!-- end logo -->
-                <nav class="cbm-main-menu" id="navbar-menu">
-                    <ul class="nav fs-5 navbar-brand">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="kategori/game.html" class="nav-link">Game</a></li>
-                        <li><a href="kategori/Voucher.html" class="nav-link">Voucher</a></li>
-                        <li><a href="kategori/Entertainment.html" class="nav-link">Entertainment</a></li>
-                    </ul>
-                </nav>
-                <!-- button masuk/daftar -->
-                <div class="text-end">
-                    <a href="member/masuk.html" class="btn btn-outline-primary me-2 flex-shrink-0 log-img">Masuk</a>
-                    <a href="member/daftar.html" class="btn btn-primary log-img" style="color: white;">Daftar</a>
-                    <button class="btn btn-light sidebar-menu" type="button"><img src="assets/images/logo/bar.svg"
-                            alt="user" width="20" onclick="openRightMenu();">
-                </div>
-                <!-- end button -->
+<div class="site-main" onclick="closeRightMenu()">
+    <br>
+    <div class="container">
+        <article class=" bg-white p-4">
+            <header>
+                <h2 style="text-align: center;"><b>Kebijakan Privasi</b></h2>
             </header>
-        </div>
-    </div>
-
-    <div class="site-main" onclick="closeRightMenu()">
-        <br>
-        <div class="container">
-            <article class=" bg-white p-4">
-                <header>
-                    <h2 style="text-align: center;"><b>Kebijakan Privasi</b></h2>
-                </header>
-                <div>
-                    <p>
-                        Kebijakan privasi ini mengatur tentang kebijakan dan prosedur kami dalam mengumpulkan,
-                        menggunakan dan mengungkapkan informasi pengguna dan dengan menggunakan layanan ini pengguna
-                        menyetujui pengumpulan, pemindahan data, pemprosesan, penyimpanan, pengungkapan dan penggunaan
-                        lainnya yang dijelaskan dalam kebijakan privasi ini.</p>
-                    <p>
-                        AsdarrID mengikuti standar yang berlaku secara umum untuk melindungi informasi yang dikirimkan
-                        kepada AsdarrID, baik saat transisi maupun saat menerimanya. AsdarrID menyadari bahwa informasi
-                        pengguna bersifat rahasia dan pribadi, oleh karena itu AsdarrID berkomitmen untuk menjaga
-                        kerahasiaan data tersebut.
-                    </p>
-                    <h4><b>Informasi yang diterima dari pengguna</b></h4>
-                    <p>
-                        Informasi yang kami ambil dari pengguna, terbagi dalam dua kategori: 1) data pribadi yang Anda
-                        berikan secara sukarela ketika registrasi dan 2) penelusuran informasi yang dikumpulkan ketika
-                        Anda menggunakan layanan. Data pribadi tersebut berupa informasi yang berkenaan dengan data
-                        pengguna termasuk namun tidak terbatas pada nama, nomor kontak, akun email, dan media sosial.
-                    </p>
-                    <h4><b>Penggunaan Informasi</b></h4>
-                    <p>
-                        AsdarrID akan menggunakan informasi sebagaimana disebut di atas baik informasi individual maupun
-                        agregat untuk pelaksanaan layanan ini pada khususnya dan layanan lain AsdarrID secara
-                        keseluruhan, seperti namun tidak terbatas pada perencanaan, penelitian, desain dan pemasaran
-                        jasa, memberikan bantuan kepada pihak penegak hukum, pemerintah atau badan hukum atau mematuhi
-                        hukum yang berlaku di NKRI ataupun perintah pengadilan. Informasi yang disampaikan di area umum
-                        akan menjadi informasi publik. Kami menghimbau pengguna untuk memperhatikan informasi yang
-                        diberikan pada halaman publik.
-                    </p>
-                    <h4><b>Berbagi Informasi dengan Pihak Ketiga</b></h4>
-                    <p>
-                        AsdarrID tidak menjual, menyewakan, menukar atau memberikan wewenang kepada pihak ketiga yang
-                        tidak berkomitmen untuk menjaga kerahasiaan data pribadi Anda. Namun AsdarrID terikat kontrak
-                        dengan banyak perusahaan lain untuk memberikan berbagai layanan yang memperkaya pengalaman
-                        pengguna dalam menggunakan layanan. Perusahaanperusahaan ini dilarang keras untuk
-                        menyalahgunakan data-data yang diberikan selain dengan layanan yang berkaitan dengan layanan ini
-                        dan mereka tidak diperkenankan membagi atau menjual kembali data ini.
-                    </p>
-                    <h4><b>Perlindungan dan Keamanan Informasi</b></h4>
-                    <p>
-                        Untuk mencegah akses data oleh pihak yang tidak memiliki wewenang, menjaga keakuratan data dan
-                        memastikan penggunaan informasi yang semestinya, AsdarrID berkomitmen untuk menjaga keamanan
-                        tersebut dengan menggunakan prosedur fisik, elektronik, dan manajerial untuk melindungi
-                        informasi yang kami simpan.
-                    </p>
-                    <h4><b>Kepatuhan pada Proses Hukum</b></h4>
-                    <p>
-                        AsdarrID dapat menyampaikan informasi pribadi jika diperintahkan oleh hukum atau dianggap bahwa
-                        langkah tersebut adalah perlu dilakukan untuk 1) patuh pada hukum atau proses pengadilan; 2)
-                        melindungi dan mempertahankan hak cipta dan hak milik kami; 3) melindungi terhadap
-                        penyalahgunaan atau penggunaan tanpa ijin dari situs web kami; atau 4) melindungi keamanan
-                        pribadi atau properti atas pengguna kami atau publik (di antara hal lainnya, hal ini berarti
-                        jika Anda memberikan informasi palsu atau berpura-pura menjadi orang lain, informasi mengenai
-                        diri Anda dapat kami sampaikan sebagai bagian dari penyelidikan atas tindakan Anda).
-                    </p>
-                    <h4><b>Informasi Lainnya</b></h4>
-                    <p>
-                        Kebijakan privasi ini dapat diubah atau ditambah sewaktu-waktu. Setiap perubahan akan
-                        ditampilkan di halaman ini. Oleh karenanya kami menghimbau pengguna untuk mengakses halaman ini
-                        secara berkala untuk mengetahui perubahannya (apabila ada).
-                    </p>
-                    <br>
-                    <p>
-                        Dengan menggunakan layanan ini, pengguna dianggap telah menyetujui ketentuan kebijakan privasi
-                        ini. Apabila pengguna tidak setuju dengan Kebijakan Privasi ini, pengguna dipersilahkan untuk
-                        berhenti menggunakan layanan AsdarrID.
-                    </p>
-                </div>
-            </article>
-        </div>
-
-
-    </div>
-    <br><br>
-    <!-- deskripsi -->
-    <div class="bg-primary bg-gradient">
-        <div class="container">
-            <div class="py-4 text-white desc">
-                <h2 class="display-6 fw-600 fs-5">
-                    <b>AsdarrID: Top-up Produk Digital Legal, Murah, Cepat, dan Aman.</b>
-                </h2>
-                <p class="fs-6 m-0">Tempat top-up game dan voucher termurah dan terpercaya. Beli Voucher Digital dalam
-                    satu website dengan harga terbaik, banyak bonus dan promo diskon paling murah langsung dalam satu
-                    websites.</p>
+            <div>
+                <p>
+                    Kebijakan privasi ini mengatur tentang kebijakan dan prosedur kami dalam mengumpulkan,
+                    menggunakan dan mengungkapkan informasi pengguna dan dengan menggunakan layanan ini pengguna
+                    menyetujui pengumpulan, pemindahan data, pemprosesan, penyimpanan, pengungkapan dan penggunaan
+                    lainnya yang dijelaskan dalam kebijakan privasi ini.</p>
+                <p>
+                    AsdarrID mengikuti standar yang berlaku secara umum untuk melindungi informasi yang dikirimkan
+                    kepada AsdarrID, baik saat transisi maupun saat menerimanya. AsdarrID menyadari bahwa informasi
+                    pengguna bersifat rahasia dan pribadi, oleh karena itu AsdarrID berkomitmen untuk menjaga
+                    kerahasiaan data tersebut.
+                </p>
+                <h4><b>Informasi yang diterima dari pengguna</b></h4>
+                <p>
+                    Informasi yang kami ambil dari pengguna, terbagi dalam dua kategori: 1) data pribadi yang Anda
+                    berikan secara sukarela ketika registrasi dan 2) penelusuran informasi yang dikumpulkan ketika
+                    Anda menggunakan layanan. Data pribadi tersebut berupa informasi yang berkenaan dengan data
+                    pengguna termasuk namun tidak terbatas pada nama, nomor kontak, akun email, dan media sosial.
+                </p>
+                <h4><b>Penggunaan Informasi</b></h4>
+                <p>
+                    AsdarrID akan menggunakan informasi sebagaimana disebut di atas baik informasi individual maupun
+                    agregat untuk pelaksanaan layanan ini pada khususnya dan layanan lain AsdarrID secara
+                    keseluruhan, seperti namun tidak terbatas pada perencanaan, penelitian, desain dan pemasaran
+                    jasa, memberikan bantuan kepada pihak penegak hukum, pemerintah atau badan hukum atau mematuhi
+                    hukum yang berlaku di NKRI ataupun perintah pengadilan. Informasi yang disampaikan di area umum
+                    akan menjadi informasi publik. Kami menghimbau pengguna untuk memperhatikan informasi yang
+                    diberikan pada halaman publik.
+                </p>
+                <h4><b>Berbagi Informasi dengan Pihak Ketiga</b></h4>
+                <p>
+                    AsdarrID tidak menjual, menyewakan, menukar atau memberikan wewenang kepada pihak ketiga yang
+                    tidak berkomitmen untuk menjaga kerahasiaan data pribadi Anda. Namun AsdarrID terikat kontrak
+                    dengan banyak perusahaan lain untuk memberikan berbagai layanan yang memperkaya pengalaman
+                    pengguna dalam menggunakan layanan. Perusahaanperusahaan ini dilarang keras untuk
+                    menyalahgunakan data-data yang diberikan selain dengan layanan yang berkaitan dengan layanan ini
+                    dan mereka tidak diperkenankan membagi atau menjual kembali data ini.
+                </p>
+                <h4><b>Perlindungan dan Keamanan Informasi</b></h4>
+                <p>
+                    Untuk mencegah akses data oleh pihak yang tidak memiliki wewenang, menjaga keakuratan data dan
+                    memastikan penggunaan informasi yang semestinya, AsdarrID berkomitmen untuk menjaga keamanan
+                    tersebut dengan menggunakan prosedur fisik, elektronik, dan manajerial untuk melindungi
+                    informasi yang kami simpan.
+                </p>
+                <h4><b>Kepatuhan pada Proses Hukum</b></h4>
+                <p>
+                    AsdarrID dapat menyampaikan informasi pribadi jika diperintahkan oleh hukum atau dianggap bahwa
+                    langkah tersebut adalah perlu dilakukan untuk 1) patuh pada hukum atau proses pengadilan; 2)
+                    melindungi dan mempertahankan hak cipta dan hak milik kami; 3) melindungi terhadap
+                    penyalahgunaan atau penggunaan tanpa ijin dari situs web kami; atau 4) melindungi keamanan
+                    pribadi atau properti atas pengguna kami atau publik (di antara hal lainnya, hal ini berarti
+                    jika Anda memberikan informasi palsu atau berpura-pura menjadi orang lain, informasi mengenai
+                    diri Anda dapat kami sampaikan sebagai bagian dari penyelidikan atas tindakan Anda).
+                </p>
+                <h4><b>Informasi Lainnya</b></h4>
+                <p>
+                    Kebijakan privasi ini dapat diubah atau ditambah sewaktu-waktu. Setiap perubahan akan
+                    ditampilkan di halaman ini. Oleh karenanya kami menghimbau pengguna untuk mengakses halaman ini
+                    secara berkala untuk mengetahui perubahannya (apabila ada).
+                </p>
+                <br>
+                <p>
+                    Dengan menggunakan layanan ini, pengguna dianggap telah menyetujui ketentuan kebijakan privasi
+                    ini. Apabila pengguna tidak setuju dengan Kebijakan Privasi ini, pengguna dipersilahkan untuk
+                    berhenti menggunakan layanan AsdarrID.
+                </p>
             </div>
-        </div>
+        </article>
     </div>
-    <!-- end deskripsi -->
+</div>
 
-    <div class="footer mt-auto border-top">
-        <!-- metode pembayaran yang didukung -->
-        <div class="container">
-            <div class="col-md-12 col-12">
-                <div class="row pt-4">
-                    <div class="col-md-12 text-center mb-3">
-                        <h5 class="mb-1">Didukung Pembayaran</h5>
-                    </div>
-                    <div class="text-center list-support-payment" style="pointer-events: none;">
-                        <img src="assets/images/payment/bca.svg">
-                        <img src="assets/images/payment/bni.svg">
-                        <img src="assets/images/payment/bri.svg">
-                        <img src="assets/images/payment/mandiri.svg">
-                        <img src="assets/images/payment/alfamart.svg">
-                        <img src="assets/images/payment/indomaret.svg">
-                        <img src="assets/images/payment/alfamidi.svg">
-                        <img src="assets/images/payment/gopay.svg">
-                        <img src="assets/images/payment/linkaja.svg">
-                        <img src="assets/images/payment/shopeepay.svg">
-                        <img src="assets/images/payment/ovo.svg">
-                        <img src="assets/images/payment/dana.svg">
-                        <img src="assets/images/payment/qris.svg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end pembayaran -->
+<script src="assets/js/main.js"></script>
 
-        <footer>
-            <div class="container">
-                <div class="row pt-5 pb-4 mt-4 border-top justify-content-center">
-
-                    <div class="col-lg-3 col-6">
-                        <h5>Sitelinks</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#Game" class="text-decoration-none p-0 text-muted"
-                                    style="font-size: medium;">Game</a></li>
-                            <li class="nav-item mb-2"><a href="#Voucher" class="text-decoration-none p-0 text-muted"
-                                    style="font-size: medium;">Voucher</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="#Entertainment"
-                                    class="text-decoration-none p-0 text-muted"
-                                    style="font-size: medium;">Entertainment</a></li>
-                            <br>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-6">
-                        <h5>Ikuti Kami</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2">
-                                <a href="https://www.facebook.com/profile.php?id=100055745330328" target="_blank"
-                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Facebook</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="https://instagram.com/asdarr.id?igshid=YmMyMTA2M2Y=" target="_blank"
-                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Instagram</a>
-                            </li>
-                            <br>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-6">
-                        <h5>AsdarrID</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="tentang-kami.html"
-                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Tentang
-                                    Kami</a></li>
-                            <li class="nav-item mb-2"><a href="kebijakan-privasi.html"
-                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Kebijakan
-                                    Privasi</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-6">
-                        <h5>Kontak Kami</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2">
-                                <a href="mailto:asdarrid.cs@gmail.com" class="text-decoration-none p-0 text-muted"
-                                    style="text-decoration: none;font-size: medium;"><span>asdarrid.cs@gmail.com</span></a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="https://wa.me/6283123658885" target="_blank"
-                                    class="text-decoration-none p-0 text-muted"
-                                    style="font-size: medium;">+6283-123-65-8885</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <p>© 2022</p>
-            </div>
-        </footer>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
-</body>
-
-</html>
+<%- contentFor('title') %>
+AsdarrID - Kebijakan Privasi
