@@ -28,6 +28,13 @@ router.get('/voucher', (req, res) => {
     res.render('pages/voucher')
 });
 
-//
+//produk
+router.get('/arena-of-valor', (req, res) => {
+    res.render('pages/arena-of-valor')
+});
+
+router.get('/au2-mobile', (req, res) => {
+    res.render('pages/au2-mobile')
+});
 
 module.exports = router;
