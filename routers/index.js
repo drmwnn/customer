@@ -15,16 +15,19 @@ router.get('/kebijakan-privasi', (req, res) => {
     res.render('pages/kebijakan-privasi')
 });
 
-router.get('/kategori/entertainment', (req, res) => {
-    res.render('pages/kategori/entertainment')
+//kategori
+router.get('/game', (req, res) => {
+    res.render('pages/game')
 });
 
-router.get('/kategori/game', (req, res) => {
-    res.render('pages/kategori/game')
+router.get('/entertainment', (req, res) => {
+    res.render('pages/entertainment')
 });
 
-router.get('/kategori/voucher', (req, res) => {
-    res.render('pages/kategori/voucher')
+router.get('/voucher', (req, res) => {
+    res.render('pages/voucher')
 });
+
+//
 
 module.exports = router;
