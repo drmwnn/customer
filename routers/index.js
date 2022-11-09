@@ -37,4 +37,18 @@ router.get('/au2-mobile', (req, res) => {
     res.render('pages/au2-mobile')
 });
 
+router.get('/call-of-duty-mobile', (req, res) => {
+    res.render('pages/call-of-duty-mobile')
+});
+
+router.get('/cloud-song', (req, res) => {
+    res.render('pages/cloud-song')
+});
+
+router.get('/football-master-2', (req, res) => {
+    res.render('pages/football-master-2')
+});
+
+
+
 module.exports = router;
