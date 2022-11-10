@@ -49,6 +49,82 @@ router.get('/football-master-2', (req, res) => {
     res.render('pages/football-master-2')
 });
 
+router.get('/free-fire', (req, res) => {
+    res.render('pages/free-fire')
+});
+
+router.get('/genshin-impact', (req, res) => {
+    res.render('pages/genshin-impact')
+});
+
+router.get('/hyper-front', (req, res) => {
+    res.render('pages/hyper-front')
+});
+
+router.get('/laplace', (req, res) => {
+    res.render('pages/laplace')
+});
+
+router.get('/lifeafter', (req, res) => {
+    res.render('pages/lifeafter')
+});
+
+router.get('/lokapala', (req, res) => {
+    res.render('pages/lokapala')
+});
+
+router.get('/lords-mobile', (req, res) => {
+    res.render('pages/lords-mobile')
+});
+
+router.get('/mobile-legends', (req, res) => {
+    res.render('pages/mobile-legends')
+});
+
+router.get('/omega-legends', (req, res) => {
+    res.render('pages/omega-legends')
+});
+
+router.get('/point-blank', (req, res) => {
+    res.render('pages/point-blank')
+});
+
+router.get('/pubg-mobile', (req, res) => {
+    res.render('pages/pubg-mobile')
+});
+
+router.get('/speed-drifters', (req, res) => {
+    res.render('pages/speed-drifters')
+});
+
+router.get('/tom-and-jerry-chase', (req, res) => {
+    res.render('pages/tom-and-jerry-chase')
+});
+
+router.get('/tower-of-fantasy', (req, res) => {
+    res.render('pages/tower-of-fantasy')
+});
+
+router.get('/werewolf', (req, res) => {
+    res.render('pages/werewolf')
+});
+
+router.get('/garena-shell', (req, res) => {
+    res.render('pages/garena-shell')
+});
+
+router.get('/minecraft', (req, res) => {
+    res.render('pages/minecraft')
+});
+
+router.get('/smile-one', (req, res) => {
+    res.render('pages/smile-one')
+});
+
+router.get('/youtube-premium', (req, res) => {
+    res.render('pages/youtube-premium')
+});
+
 
 
 module.exports = router;
