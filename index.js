@@ -35,5 +35,5 @@ const index = require('./routers/index');
 
 app.use('/', index);
 
-app.listen(4000);
-console.log('Server runs at port 4000...');
+app.listen(3000);
+console.log('Server runs at port 3000...');
