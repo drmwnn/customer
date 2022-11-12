@@ -1,0 +1,46 @@
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;line-height: 50%;"
+    id="rightMenu">
+    <button onclick="closeRightMenu()" class=" w3-button w3-large"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+            height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </svg></button>
+    <div style="line-height: 70%;">
+        <a href="index" class="w3-bar-item w3-button" style="text-align: right;">Home</a>
+        <a href="game" class="w3-bar-item w3-button" style="text-align: right;">Game</a>
+        <a href="voucher" class="w3-bar-item w3-button" style="text-align: right;">Voucher</a>
+        <a href="entertainment" class="w3-bar-item w3-button"
+            style="text-align: right;margin-bottom: 5px;">Entertainment</a>
+    </div>
+    <div class="w3-border-top" style="line-height: 70%;">
+        <a href="masuk" class="w3-bar-item w3-button" style="text-align: right;margin-top: 5px;">Masuk</a>
+        <a href="daftar" class="w3-bar-item w3-button" style="text-align: right;">Daftar</a>
+    </div>
+</div>
+<div class="cmb-header-shadow" id="navbar">
+    <div class="container">
+        <header class="d-flex align-items-center justify-content-center justify-content-md-between py-3">
+            <!-- logo -->
+            <a href="index" class="d-flex align-items-center">
+                <img src="assets/images/logo/logo-a.png" class="logo" alt=".." height="40">
+            </a>
+            <!-- end logo -->
+            <nav class="cbm-main-menu" id="navbar-menu">
+                <ul class="nav fs-5 navbar-brand">
+                    <li><a href="index" class="nav-link">Home</a></li>
+                    <li><a href="game" class="nav-link">Game</a></li>
+                    <li><a href="voucher" class="nav-link">Voucher</a></li>
+                    <li><a href="entertainment" class="nav-link">Entertainment</a></li>
+                </ul>
+            </nav>
+            <!-- button masuk/daftar -->
+            <div class="text-end">
+                <a href="masuk" class="btn btn-outline-primary me-2 flex-shrink-0 log-img">Masuk</a>
+                <a href="daftar" class="btn btn-primary log-img" style="color: white;">Daftar</a>
+                <button class="btn btn-light sidebar-menu" type="button"><img src="assets/images/logo/bar.svg"
+                        alt="user" width="20" onclick="openRightMenu();">
+            </div>
+            <!-- end button -->
+        </header>
+    </div>
+</div>

@@ -29,7 +29,7 @@
                 </a>
             </div>
             <div class="bg-white cbm-section-shadow rounded-3 form-sign-area">
-                <form>
+                <form action="/auth/login" method="post">
                     <div class="row g-3">
                         <div class="fields-form on-progress">
                             <div class="row g-3">
@@ -53,8 +53,8 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <a href="../Index-login.html" id="login-submit" class="w-100 btn btn-primary"
-                                onclick="return valMasuk();">Masuk</a>
+                            <input type="submit" class="w-100 btn btn-primary" name="submit" value="Login">
+
                         </div>
                         <div class="mt-3 text-muted text-center" style="font-size:0.9rem!important">
                             Belum punya akun? <a href="daftar.html"
@@ -68,16 +68,7 @@
     </div>
     </div>
     <script src="../assets/js/main.js"></script>
-    <script>
-        function myFunction() {
-            var x = document.getElementById("password");
-            if (x.type === "password") {
-                x.type = "text";
-            } else {
-                x.type = "password";
-            }
-        }
-    </script>
+    <script src="../assets/js/pw.js"></script>
 </body>
 
 </html>

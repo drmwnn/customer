@@ -1,25 +1,40 @@
-<link rel="stylesheet" href="assets/css/style.css">
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="site-main" onclick="closeRightMenu()">
-    <br>
-    <div class="container">
-        <article class=" bg-white p-4">
-            <header>
-                <h3 style="text-align: center;"><b>Tentang Kami</b></h3>
-            </header>
+<head>
+    <%- include('../layouts/header.ejs'); %>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>AsdarrID - Tentang Kami</title>
+</head>
 
-            <p style="width: 100%;">
-                AsdarrID adalah situs top-up game, voucher, dan kebutuhan entertainment terpecaya di Indonesia.
-                Kami menyediakan top up game Arena of Valor, Mobile Legends, Free Fire, PUBG Mobile, Point Blank,
-                Lokapala dan masih banyak lagi. Rasakan kemudahan top-up diamonds secara instan dan mudah tanpa
-                perlu login atau registrasi hanya di AsdarrID!
-                <p>
+<body>
+    <%- include('../layouts/none.ejs'); %>
+    <%- include('../layouts/navbar.ejs'); %>
 
-        </article>
+    <div class="site-main" onclick="closeRightMenu()">
+        <br>
+        <div class="container">
+            <article class=" bg-white p-4">
+                <header>
+                    <h3 style="text-align: center;"><b>Tentang Kami</b></h3>
+                </header>
+
+                <p style="width: 100%;">
+                    AsdarrID adalah situs top-up game, voucher, dan kebutuhan entertainment terpecaya di Indonesia.
+                    Kami menyediakan top up game Arena of Valor, Mobile Legends, Free Fire, PUBG Mobile, Point Blank,
+                    Lokapala dan masih banyak lagi. Rasakan kemudahan top-up diamonds secara instan dan mudah tanpa
+                    perlu login atau registrasi hanya di AsdarrID!
+                    <p>
+
+            </article>
+        </div>
+
+
     </div>
-</div>
+    <br><br>
+    <%- include('../layouts/footer.ejs'); %>
+    <script src="assets/js/main.js"></script>
+</body>
+</body>
 
-<script src="assets/js/main.js"></script>
-
-<%- contentFor('title') %>
-AsdarrID - Tentang Kami
+</html>

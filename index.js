@@ -1,18 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const layouts = require('express-ejs-layouts');
-
+const mongoose = require('mongoose');
 const app = express();
 
-// set the view engine to ejs
-app.set('view engine', 'ejs'); // Model - View - Controller
+app.set('view engine', 'ejs');
 
-// body-parser to parse request body
-app.use(bodyParser.urlencoded()); // req res : request response
-
-// static files
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded());
+//layouts
 
 // enabling session
 app.use(session({
@@ -20,20 +16,23 @@ app.use(session({
     cookie: {}
 }));
 
-// use layouts
-app.use(layouts);
-app.set('layout', 'layouts/main.ejs');
+mongoose.connect(('mongodb://127.0.0.1:27017/AsdarrID')
+    , (err,res) => {
+        if(err){
+            console.error(err);
+        }
+        else{
+            console.log('Database connected')
+        }
+    })
 
-// place all styles block in the layout at the head
-app.set("layout extractStyles", true)
+//routes
+const index = require('./routes/index');
 
-// place all scripts block in the layout at the end
-app.set("layout extractScripts", true)
+app.use('/', index)
 
-// routes
-const index = require('./routers/index');
+app.listen(process.env.PORT || 4000, function(){
+  console.log("Server runs at port 4000...");
+});
 
-app.use('/', index);
 
-app.listen(3000);
-console.log('Server runs at port 3000...');
