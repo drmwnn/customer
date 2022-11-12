@@ -16,8 +16,7 @@ app.use(session({
     cookie: {}
 }));
 
-mongoose.connect(('mongodb://127.0.0.1:27017/AsdarrID')
-    , (err,res) => {
+mongoose.connect(('mongodb://127.0.0.1:27017/AsdarrID'), (err,res) => {
         if(err){
             console.error(err);
         }
@@ -31,8 +30,8 @@ const index = require('./routes/index');
 
 app.use('/', index)
 
-app.listen(process.env.PORT || 4000, function(){
-  console.log("Server runs at port 4000...");
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Server runs at port 3000...");
 });
 
 
