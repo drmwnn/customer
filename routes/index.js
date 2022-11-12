@@ -20,6 +20,10 @@ router.get('/masuk', (req, res) => {
     res.render('pages/masuk')
 });
 
+router.get('/daftar', (req, res) => {
+    res.render('pages/daftar')
+});
+
 //kategori
 router.get('/game', (req, res) => {
     res.render('pages/game')
