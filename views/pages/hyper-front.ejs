@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../layouts/header.ejs'); %>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/produk.css">
+    <title>AsdarrID - Hyper Front</title>
+</head>
+
+<body>
+    <%- include('../layouts/none.ejs'); %>
+    <%- include('../layouts/navbar.ejs'); %>
+
+    <!-- konten -->
+    <div class="single-product py-5" onclick="closeRightMenu()">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-12 col-lg-4 order-lg-last">
+                    <article>
+                        <div class="card border-0 mb-4">
+                            <div class="card-body p-0" style="background-color: #f8fafd;">
+
+                                <!-- nama produk & logo -->
+                                <div class="d-flex gap-3 align-items-center" style="justify-content: left!important;">
+                                    <div class="thumbnail-product">
+                                        <img itemprop="image" src="assets/images/game/Hyper Front.jpeg" alt=""
+                                            class="rounded-3" height="100px">
+                                    </div>
+                                    <div class="product-data">
+                                        <h1 class="fs-5 mb-1 entry-title" itemprop="name">Hyper Front</h1>
+                                        <div class="fs-6 text-muted">NTES Games</div>
+                                    </div>
+                                </div>
+                                <!-- end -->
+
+                                <!-- app/play store & situs web -->
+                                <div class="product_link_store">
+                                    <div class="item_link_store">
+                                        <a href="https://play.google.com/store/apps/details?id=com.battlefun.c1game.na&hl=en_US&gl=US"
+                                            target="_blank">
+                                            <img src="assets/images/logo/play.svg"
+                                                title="Temukan di Google Playstore" />
+                                        </a>
+                                    </div>
+                                    <div class="item_link_store">
+                                        <a href="https://apps.apple.com/TH/app/id1628463651?mt=8" target="_blank">
+                                            <img src="assets/images/logo/apps.svg" title="Download di App Store" />
+                                        </a>
+                                    </div>
+                                    <div class="item_link_store">
+                                        <a href="https://www.hyper-front.com/"
+                                            class="item_link_website d-flex gap-2 align-items-center" target="_blank"
+                                            title="Situs WEB">
+                                            <img src="assets/images/game/Hyper Front.jpeg" class="rounded-circle">
+                                            <div>
+                                                <span class="mb-0">SITUS</span>
+                                                <p class="mb-0">WEB</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- end -->
+
+                                <!-- deskripsi produk -->
+                                <div class="mt-2">
+                                    <span>
+                                        <h5 style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span
+                                                style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;"><b>
+                                                    Tentang Hyper Front</b></span></h5>
+                                        <p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span
+                                                style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                                                Hyper Front adalah mobile game FPS yang berbasis 5v5. Bergabunglah
+                                                dengan kompetisi PvP yang intens, gunakan senjata canggih,<span
+                                                    id="dots">...</span><span id="more"> dan ciptakan peluang taktis
+                                                    untuk memenangkan medan perang.</span>
+                                        </p>
+                                        <div>
+                                        </div>
+                                    </span>
+                                    <a onclick="myFunction()" id="myRead"> Read more </a>
+                                </div>
+                                <!-- end -->
+                            </div>
+                        </div>
+
+                        <!-- cara top up -->
+                        <div class="card product-how-to-top-up">
+                            <h6> Cara Top Up </h6>
+                            <div class="card-body p-3">
+                                <div class="fs-6" style="font-size: 0.89rem;">
+                                    <ol>
+                                        <li>Masukkan User ID</li>
+                                        <li>Pilih Nominal Star Quartz</li>
+                                        <li>Pilih Metode Pembayaran</li>
+                                        <li>Tulis nomor WhatsApp yang benar!</li>
+                                        <li>Klik Beli & lakukan Pembayaran</li>
+                                        <li>Upload bukti pembayaran</li>
+                                        <li>Star Quartz akan masuk otomatis ke akun Anda.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end -->
+                    </article>
+                </div>
+                <div class="col-md-12 col-lg-8">
+                    <form>
+                        <div class="card border-0 cbm-section-shadow mb-4 product-form-input-order">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2" style="justify-content: left!important;">
+                                    <div class="number-form">1</div>
+                                    <h4 class="mb-0 ms-2 fw-600">Masukkan User
+                                        ID</h4>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col">
+                                        <label class="form-label" for="userID">User ID</label>
+                                        <input type="text" class="form-control" name="userID" id="userID"
+                                            placeholder="Masukan User ID">
+                                        <small class="where-my-user-id" data-bs-toggle="modal"
+                                            data-bs-target="#WhereMyUserID">Dimana User ID Saya?</small>
+                                    </div>
+
+                                    <!-- Dimana User ID Saya? -->
+                                    <div class="modal fade" id="WhereMyUserID" aria-labelledby="WhereMyUserIDLabel">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <div class="modal-title">
+                                                        <div class="d-flex flex-row align-items-center">
+                                                            <div class="fw-bold">Dimana User ID
+                                                                Saya?</div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img src="assets/images/game/id/hyperfront.jpeg"
+                                                        alt="Dimana User ID Saya?">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Tutup</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card border-0 cbm-section-shadow mb-4 bg-white rounded-5 product-form-input-order">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3" style="justify-content: left!important;">
+                                    <div class="number-form">2</div>
+                                    <h4 class="mb-0 ms-2 fw-600">Pilih Jumlah Star Quartz</h4>
+                                </div>
+                                <div class="row">
+
+                                    <div class="row row-cols-3 g-3">
+
+                                        <!-- 60 -->
+                                        <div class="col mt-3">
+                                            <div class="list-group">
+                                                <input type="radio" class="btn-check h-100" name="denom" id="nominal-60"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-info " style="height:50%;width:100%"
+                                                    for="nominal-60">Star Quartz 60</label>
+                                            </div>
+                                        </div>
+                                        <!-- end -->
+
+                                        <!-- 300 -->
+                                        <div class="col mt-3">
+                                            <div class="list-group">
+                                                <input type="radio" class="btn-check h-100" name="denom"
+                                                    id="nominal-300" autocomplete="off">
+                                                <label class="btn btn-outline-info" for="nominal-300">Star
+                                                    Quartz 300</label>
+                                            </div>
+                                        </div>
+                                        <!-- end -->
+
+                                        <!-- 980 -->
+                                        <div class="col mt-3">
+                                            <div class="list-group">
+                                                <input type="radio" class="btn-check h-100" name="denom"
+                                                    id="nominal-980" autocomplete="off">
+                                                <label class="btn btn-outline-info" for="nominal-980">Star Quartz 980
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- end -->
+
+                                        <!-- 1980 -->
+                                        <div class="col mt-3">
+                                            <div class="list-group">
+                                                <input type="radio" class="btn-check" name="denom" id="nominal-1980"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-info" for="nominal-1980">Star Quartz 1980
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- end -->
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <%- include('../layouts/list-pembayaran.ejs'); %>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end konten -->
+
+    <%- include('../layouts/footer.ejs'); %>
+    <script src="assets/js/button.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
