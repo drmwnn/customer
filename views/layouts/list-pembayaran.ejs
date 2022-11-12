@@ -1,0 +1,396 @@
+<div id="list-payment-method" class="card border-0 cbm-section-shadow mb-4 bg-white rounded-5 product-form-input-order">
+    <div class="card-body">
+        <div class="d-flex align-items-center mb-3" style="justify-content: left!important;">
+            <div class="number-form">3</div>
+            <h4 class="mb-0 ms-2 fw-600">Pilih Metode Pembayaran</h4>
+        </div>
+        <div class="area-list-payment-method">
+
+            <!-- pay retail -->
+            <div class="child-box payment-drawwer">
+                <div class="header short-payment-support-info-head" onclick="openPaymentDrawer(this)">
+                    <div class="left">
+                        <b><i class="fas fa-store"></i> Retail Outlet</b>
+                    </div>
+                    <div class="right"><b>Rp10.000</b></div>
+                </div>
+                <div class="btn-group button-action-payment">
+                    <div class="row row-cols-lg-2 row-cols-sm-1 list-payment-method">
+
+                        <!-- Alfamart -->
+                        <div class="col-lg-6 mt-3">
+                            <div class="list-group">
+                                <input type="radio" class="btn-check" name="payment" id="alfamart" autocomplete="off">
+                                <label class="btn btn-outline-info" style="border-color: #b2c7d5;" for="alfamart">
+                                    <div class="payment-item">
+                                        <div class="info-top">
+                                            <img src="assets/images/payment/alfamart.svg">
+                                            <b style="color: black;">Rp10.000</b>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="info-bottom" style="color: black;">
+                                                Alfamart</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- end -->
+
+                        <!-- Alfamidi -->
+                        <div class="col-lg-6 mt-3">
+                            <div class="list-group">
+                                <input type="radio" class="btn-check" name="payment" id="Alfamidi" autocomplete="off">
+                                <label class="btn btn-outline-info" style="border-color: #b2c7d5;" for="Alfamidi">
+                                    <div class="payment-item">
+                                        <div class="info-top">
+                                            <img src="assets/images/payment/alfamidi.svg">
+                                            <b style="color: black;">Rp10.000</b>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="info-bottom" style="color: black;">
+                                                Alfamidi</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- end -->
+
+                        <!-- Indomaret -->
+                        <div class="col-lg-6 mt-3">
+                            <div class="list-group">
+                                <input type="radio" class="btn-check" name="payment" id="Indomaret" autocomplete="off">
+                                <label class="btn btn-outline-info" style="border-color: #b2c7d5;" for="Indomaret">
+                                    <div class="payment-item">
+                                        <div class="info-top">
+                                            <img src="assets/images/payment/indomaret.svg">
+                                            <b style="color: black;">Rp10.000</b>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="info-bottom" style="color: black;">
+                                                Indomaret</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- end -->
+
+                    </div>
+                </div>
+                <div class="short-payment-support-info-container">
+                    <div class="short-payment-support-info" onclick="openPaymentDrawer(this)">
+                        <img src="assets/images/payment/alfamart.svg">
+                        <img src="assets/images/payment/alfamidi.svg">
+                        <img src="assets/images/payment/indomaret.svg">
+
+                    </div>
+                    <a class="open-button-action-payment">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- end Retail -->
+
+            <!-- E-wallet -->
+            <div class="child-box payment-drawwer">
+                <div class="header short-payment-support-info-head" onclick="openPaymentDrawer(this)">
+                    <div class="left">
+                        <b><i class="fas fa-wallet"></i> E-Wallet</b>
+                    </div>
+                    <div class="right"><b>Rp10.000</b></div>
+                </div>
+                <div class="button-action-payment">
+
+                    <div class="row row-cols-lg-2 row-cols-sm-1 list-payment-method">
+
+                        <!-- Gopay -->
+                        <div class="col-lg-6 mt-3">
+                            <div class="list-group">
+                                <input type="radio" class="btn-check" name="payment" id="Gopay" autocomplete="off">
+                                <label class="btn btn-outline-info" style="border-color: #b2c7d5;" for="Gopay">
+                                    <div class="payment-item">
+                                        <div class="info-top">
+                                            <img src="assets/images/payment/gopay.svg">
+                                            <b style="color: black;">Rp10.000</b>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="info-bottom" style="color: black;">
+                                                Gopay</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- end -->
+
+                        <!-- LinkAja  -->
+                        <div class="col-lg-6 mt-3">
+                            <div class="list-group">
+                                <input type="radio" class="btn-check" name="payment" id="LinkAja" autocomplete="off">
+                                <label class="btn btn-outline-info" style="border-color: #b2c7d5;" for="LinkAja">
+                                    <div class="payment-item">
+                                        <div class="info-top">
+                                            <img src="assets/images/payment/linkaja.svg">
+                                            <b style="color: black;">Rp10.000</b>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="info-bottom" style="color: black;">
+                                                LinkAja</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- end -->
+
+                        <!-- shopeepay  -->
+                        <div class="col-lg-6 mt-3">
+                            <div class="list-group">
+                                <input type="radio" class="btn-check" name="payment" id="ShopeePay" autocomplete="off">
+                                <label class="btn btn-outline-info" style="border-color: #b2c7d5;" for="ShopeePay">
+                                    <div class="payment-item">
+                                        <div class="info-top">
+                                            <img src="assets/images/payment/shopeepay.svg">
+                                            <b style="color: black;">Rp10.000</b>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="info-bottom" style="color: black;">
+                                                ShopeePay</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- end -->
+
+                        <!-- ovo -->
+                        <div class="col-lg-6 mt-3">
+                            <div class="list-group">
+                                <input type="radio" class="btn-check" name="payment" id="OVO" autocomplete="off">
+                                <label class="btn btn-outline-info" style="border-color: #b2c7d5;" for="OVO">
+                                    <div class="payment-item">
+                                        <div class="info-top">
+                                            <img src="assets/images/payment/ovo.svg">
+                                            <b style="color: black;">Rp10.000</b>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="info-bottom" style="color: black;">
+                                                OVO</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- end -->
+
+                        <!-- Dana  -->
+                        <div class="col-lg-6 mt-3">
+                            <div class="list-group">
+                                <input type="radio" class="btn-check" name="payment" id="DANA" autocomplete="off">
+                                <label class="btn btn-outline-info" style="border-color: #b2c7d5;" for="DANA">
+                                    <div class="payment-item">
+                                        <div class="info-top">
+                                            <img src="assets/images/payment/dana.svg">
+                                            <b style="color: black;">Rp10.000</b>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="info-bottom" style="color: black;">
+                                                DANA</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- end -->
+
+                        <!-- QRIS -->
+                        <div class="col-lg-6 mt-3">
+                            <div class="list-group">
+                                <input type="radio" class="btn-check" name="payment" id="QRIS" autocomplete="off">
+                                <label class="btn btn-outline-info" style="border-color: #b2c7d5;" for="QRIS">
+                                    <div class="payment-item">
+                                        <div class="info-top">
+                                            <img src="assets/images/payment/qris.svg">
+                                            <b style="color: black;">Rp10.000</b>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="info-bottom" style="color: black;">
+                                                QRIS</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- end -->
+                    </div>
+                </div>
+                <div class="short-payment-support-info-container">
+                    <div class="short-payment-support-info" onclick="openPaymentDrawer(this)">
+                        <img src="assets/images/payment/gopay.svg" alt="GoPay" id="payment_methodIMG-QRISC">
+                        <img src="assets/images/payment/linkaja.svg" alt="LinkAja!" id="payment_methodIMG-QRISC">
+                        <img src="assets/images/payment/shopeepay.svg" alt="ShopeePay" id="payment_methodIMG-QRISC">
+                        <img src="assets/images/payment/ovo.svg" alt="OVO" id="payment_methodIMG-OV">
+                        <img src="assets/images/payment/dana.svg" alt="Dana" id="payment_methodIMG-DA">
+                        <img src="assets/images/payment/qris.svg" alt="QRIS" id="payment_methodIMG-QRISC">
+
+                    </div>
+                    <a class="open-button-action-payment">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- end ewallet -->
+
+            <!-- bank -->
+            <div class="child-box payment-drawwer">
+                <div class="header short-payment-support-info-head" onclick="openPaymentDrawer(this)">
+                    <div class="left">
+                        <b><i class="fas fa-university"></i> Bank Transfer</b>
+                    </div>
+                    <div class="right"><b>Rp10.000</b></div>
+                </div>
+                <div class="button-action-payment">
+                    <div class="row row-cols-lg-2 row-cols-sm-1 list-payment-method">
+
+                        <!-- BCA -->
+                        <div class="col-lg-6 mt-3">
+                            <div class="list-group">
+                                <input type="radio" class="btn-check" name="payment" id="BCA" autocomplete="off">
+                                <label class="btn btn-outline-info" style="border-color: #b2c7d5;" for="BCA">
+                                    <div class="payment-item">
+                                        <div class="info-top">
+                                            <img src="assets/images/payment/bca.svg">
+                                            <b style="color: black;">Rp10.000</b>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="info-bottom" style="color: black;">
+                                                Bank BCA</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- end -->
+
+                        <!-- BRI -->
+                        <div class="col-lg-6 mt-3">
+                            <div class="list-group">
+                                <input type="radio" class="btn-check" name="payment" id="BRI" autocomplete="off">
+                                <label class="btn btn-outline-info" style="border-color: #b2c7d5;" for="BRI">
+                                    <div class="payment-item">
+                                        <div class="info-top">
+                                            <img src="assets/images/payment/bri.svg">
+                                            <b style="color: black;">Rp10.000</b>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="info-bottom" style="color: black;">
+                                                Bank BRI</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- end -->
+
+                        <!-- BNI -->
+                        <div class="col-lg-6 mt-3">
+                            <div class="list-group">
+                                <input type="radio" class="btn-check" name="payment" id="BNI" autocomplete="off">
+                                <label class="btn btn-outline-info" style="border-color: #b2c7d5;" for="BNI">
+                                    <div class="payment-item">
+                                        <div class="info-top">
+                                            <img src="assets/images/payment/bni.svg">
+                                            <b style="color: black;">Rp10.000</b>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="info-bottom" style="color: black;">
+                                                Bank BNI</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- end -->
+
+                        <!-- MANDIRI -->
+                        <div class="col-lg-6 mt-3">
+                            <div class="list-group">
+                                <input type="radio" class="btn-check" name="payment" id="MANDIRI" autocomplete="off">
+                                <label class="btn btn-outline-info" style="border-color: #b2c7d5;" for="MANDIRI">
+                                    <div class="payment-item">
+                                        <div class="info-top">
+                                            <img src="assets/images/payment/mandiri.svg">
+                                            <b style="color: black;">Rp10.000</b>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="info-bottom" style="color: black;">
+                                                MANDIRI</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- end -->
+                    </div>
+                </div>
+                <div class="short-payment-support-info-container">
+                    <div class="short-payment-support-info" onclick="openPaymentDrawer(this)">
+                        <img src="assets/images/payment/bca.svg" alt="Bank BCA" id="payment_methodIMG-BANK_BCA">
+                        <img src="assets/images/payment/bri.svg" alt="Bank BRI" id="payment_methodIMG-BANK_BRI">
+                        <img src="assets/images/payment/bni.svg" alt="Bank BNI" id="payment_methodIMG-BANK_BNI">
+                        <img src="assets/images/payment/mandiri.svg" alt="Bank Mandiri" id="payment_methodIMG-BANK_BNI">
+
+                    </div>
+                    <a class="open-button-action-payment">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- end bank -->
+        </div>
+    </div>
+</div>
+
+<div class="card border-0 cbm-section-shadow mb-4 bg-white rounded-5 product-form-input-order">
+    <div class="card-body">
+        <div class="row g-3">
+            <div class="d-flex align-items-center" style="justify-content: left!important;">
+                <div class="number-form">4</div>
+                <h4 class="mb-0 ms-2 fw-600">Kontak</h4>
+
+            </div>
+            <div class="form-group">
+                <label for="nama" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama">
+            </div>
+            <div class="form-group">
+                <label for="whatsapp_number" class="form-label">Nomor Whatsapp</label>
+                <input type="number" class="form-control" name="whatsapp_number" id="whatsapp_number"
+                    placeholder="Nomor Whatsapp [628xxxxx]">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="float-end">
+    <a href="pembayaran" class="btn btn-primary" onclick="return radioValidation();"> <svg
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3"
+            viewBox="0 0 16 16">
+            <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+        </svg> Beli Sekarang</a>
+</div>
