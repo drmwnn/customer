@@ -424,7 +424,8 @@ div#total-bill.bank_transfer{
     background-color: white;
 }
 
-.site-main{
+.site-main,
+.single-product{
     margin-top: 70px;
 }
 
