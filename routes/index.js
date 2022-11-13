@@ -16,8 +16,8 @@ router.get('/kebijakan-privasi', (req, res) => {
 });
 
 //
-router.get('/masuk', (req, res) => {
-    res.render('pages/masuk')
+router.get('/login', (req, res) => {
+    res.render('pages/login')
 });
 
 router.get('/daftar', (req, res) => {
