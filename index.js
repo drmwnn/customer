@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const mongoose = require('mongoose');
 const app = express();
-
+const flash = require("connect-flash");
 
 app.set('view engine', 'ejs');
 
@@ -16,7 +16,13 @@ app.use(session({
     cookie: {}
 }));
 
+app.use(flash());
 
+// Middleware untuk memetakan permintaan
+app.use((req, res, next) => {
+  res.locals.isLoggedIn = req.session.isLoggedIn;
+  next();
+});
 
 mongoose.connect(('mongodb://127.0.0.1:27017/AsdarrID'), (err,res) => {
         if(err){
