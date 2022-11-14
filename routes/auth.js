@@ -18,7 +18,7 @@ router.post('/login', async (req, res) => {
   if (phone_number === "6281" && password === "admin") {
     // implement sessions to check user is logged-in
     req.session.user = "admin";
-
+    
     // redirect to member area
     res.redirect('/');
   } 
@@ -33,7 +33,7 @@ router.get('/keluar', async (req, res) => {
   req.session.destroy();
 
   // redirect to login
-  res.redirect('/login');
+  res.redirect('/');
 });
 
 module.exports = router;

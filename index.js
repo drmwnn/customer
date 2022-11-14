@@ -8,7 +8,7 @@ const flash = require("connect-flash");
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // enabling session
 app.use(session({
@@ -16,13 +16,7 @@ app.use(session({
     cookie: {}
 }));
 
-app.use(flash());
 
-// Middleware untuk memetakan permintaan
-app.use((req, res, next) => {
-  res.locals.isLoggedIn = req.session.isLoggedIn;
-  next();
-});
 
 mongoose.connect(('mongodb://127.0.0.1:27017/AsdarrID'), (err,res) => {
         if(err){
