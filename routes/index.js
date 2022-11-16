@@ -1,7 +1,7 @@
+const { request, response } = require('express');
 const express = require('express');
-const ejs = require('ejs');
-
-const router = express.Router();
+const user = require('../models/user');
+const router = express.Router()
 
 router.get('/', (req, res) => {
     res.render('pages/index')
@@ -22,6 +22,10 @@ router.get('/login', (req, res) => {
 
 router.get('/daftar', (req, res) => {
     res.render('pages/daftar')
+});
+
+router.get('/profil', (req, res) => {
+    res.render('pages/profil')
 });
 
 //kategori

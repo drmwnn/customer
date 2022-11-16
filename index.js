@@ -1,41 +1,41 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const session = require('express-session');
-const mongoose = require('mongoose');
-const app = express();
-const flash = require("connect-flash");
+const express = require('express')
+const bodyParser = require('body-parser')
+const session = require('express-session')
+const mongoose = require('mongoose')
+const app = express()
 
-app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.set('view engine', 'ejs')
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
 
-// enabling session
 app.use(session({
-    secret: 'some_secret_key',
+    secret: 'som3_secret_keys',
     cookie: {}
-}));
+}))
 
-
+app.use((request, response, next) => { 
+    response.locals.isLoggedIn = request.session.isLoggedIn;
+    next();
+})
 
 mongoose.connect(('mongodb://127.0.0.1:27017/AsdarrID'), (err,res) => {
         if(err){
             console.error(err);
         }
         else{
-            console.log('Database connected')
+            console.log('Database Sudah terhubung')
         }
     })
-
-//routes
-const index = require('./routes/index');
-const auth = require('./routes/auth');
-
-app.use('/', index);
-app.use('/auth', auth);
-
-app.listen(process.env.PORT || 3000, function(){
-  console.log("Server runs at port 3000...");
-});
-
-
+    
+const indexRouter = require('./routes/index');
+const userRouter = require('./routes/auth');
+const { request, response } = require('express');
+const port = process.env.PORT || 3000;
+app.use('/', indexRouter);
+app.use('/auth', userRouter);
+//port 
+app.listen(port, ()=> {
+    console.log(`Server sudah berjalan di port ${port}`);
+})

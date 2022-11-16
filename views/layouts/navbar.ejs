@@ -14,12 +14,12 @@
     </div>
     <% if (locals.isLoggedIn) { %>
     <div class="w3-border-top" style="line-height: 70%;">
-        <a href="member/profil.html" class="w3-bar-item w3-button"
+        <a href="profil" class="w3-bar-item w3-button"
             style="text-align: right;margin-top: 5px;">Profile</a>
-        <a href="member/profil.html" class="w3-bar-item w3-button" style="text-align: right;">Riwayat Transaksi</a>
+        <a href="profil" class="w3-bar-item w3-button" style="text-align: right;">Riwayat Transaksi</a>
     </div>
     <div class="w3-border-top" style="line-height: 70%;">
-        <a href="index.html" class="w3-bar-item w3-button" style="text-align: right;margin-top: 5px;">Keluar</a>
+        <a href="/auth/logout" class="w3-bar-item w3-button" style="text-align: right;margin-top: 5px;">Keluar</a>
     </div>
     <% } else { %>
     <div class="w3-border-top" style="line-height: 70%;">
@@ -48,7 +48,7 @@
             <!-- button masuk/daftar -->
             <% if (locals.isLoggedIn) { %>
             <div class="text-end">
-                <a href="member/profil.html" class="log-img"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                <a href="profil" class="log-img"><svg xmlns="http://www.w3.org/2000/svg" width="30"
                         height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                         <path fill-rule="evenodd"
