@@ -51,13 +51,15 @@
                                         <input type="checkbox" class="form-label" onclick="myFunction()"> Show Password
                                     </div>
                                 </div>
+                                <% if (locals.error) { %>
+                                <span class="text-danger pl-2"
+                                    style="text-align: center;font-size:0.9rem!important"><%= error %></span>
+                                <% } %>
                             </div>
                         </div>
                         <div class="col-12">
                             <input type="submit" class="w-100 btn btn-primary" name="submit" value="login">
-                            <% if (locals.error) { %>
-                            <span class="text-danger pl-2" style="text-align: center;"><%= error %></span>
-                            <% } %>
+
                         </div>
                         <div class="mt-3 text-muted text-center" style="font-size:0.9rem!important">
                             Belum punya akun?

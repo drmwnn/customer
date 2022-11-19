@@ -19,7 +19,7 @@ router.post('/lupa-kata-sandi-verification', async(request, response) => {
     response.redirect('/lupa-kata-sandi-verification')
   }
   else{
-    response.render('/lupa-kata-sandi', { layout: false, error: 'Email anda tidak terdaftar!' });
+    response.render('pages/lupa-kata-sandi', { layout: false, error: 'Email anda tidak terdaftar!' });
   }
 })
   
