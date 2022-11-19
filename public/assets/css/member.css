@@ -1,5 +1,10 @@
 html, body {
     height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
 }
 
 body {
@@ -7,7 +12,6 @@ body {
     align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    background-color: #f8fafd;
     font-family:source sans pro,sans-serif!important;
 }
 
@@ -32,14 +36,14 @@ body {
     margin:auto
 }
 .form-signin{
-    width:400px;
+    width:350px;
     margin:auto
 }
 .form-sign-area{
     padding:20px
 }
 .form-signin .checkbox{
-    font-weight:400
+    font-weight:350
 }
 .form-signin .form-floating:focus-within{
     z-index:2
@@ -56,3 +60,15 @@ body {
 .footer-copyright{
     text-align:center;
 }
+
+
+@media screen and (max-width:350px){
+    .form-signin{
+        width:300px;
+        margin:auto
+    }
+    .form-signin .checkbox{
+        font-weight:300
+    }
+}
+

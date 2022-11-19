@@ -29,12 +29,12 @@ mongoose.connect(('mongodb://127.0.0.1:27017/AsdarrID'), (err,res) => {
         }
     })
     
-const indexRouter = require('./routes/index');
-const userRouter = require('./routes/auth');
+const index = require('./routes/index');
+const user = require('./routes/auth');
 const { request, response } = require('express');
 const port = process.env.PORT || 3000;
-app.use('/', indexRouter);
-app.use('/auth', userRouter);
+app.use('/', index);
+app.use('/auth', user);
 //port 
 app.listen(port, ()=> {
     console.log(`Server sudah berjalan di port ${port}`);

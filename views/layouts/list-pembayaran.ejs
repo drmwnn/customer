@@ -375,12 +375,22 @@
             </div>
             <div class="form-group">
                 <label for="nama" class="form-label">Nama Lengkap</label>
+                <% if (locals.isLoggedIn) { %>
+                <input class="form-control" type="text" placeholder="pitryannn" aria-label="Disabled input example"
+                    disabled>
+                <% } else { %>
                 <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama">
+                <% } %>
             </div>
             <div class="form-group">
                 <label for="whatsapp_number" class="form-label">Nomor Whatsapp</label>
+                <% if (locals.isLoggedIn) { %>
+                <input class="form-control" type="text" placeholder="628123456789" aria-label="Disabled input example"
+                    disabled>
+                <% } else { %>
                 <input type="number" class="form-control" name="whatsapp_number" id="whatsapp_number"
                     placeholder="Nomor Whatsapp [628xxxxx]">
+                <% } %>
             </div>
         </div>
     </div>

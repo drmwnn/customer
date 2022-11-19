@@ -24,12 +24,12 @@
     <%- include('../layouts/none.ejs'); %>
     <div class="container-login">
         <div class="form-signin">
-            <div class="text-center mb-4">
-                <a href="/">
-                    <img src="../assets/images/logo/logo-a.png" height="39">
-                </a>
-            </div>
             <div class="bg-white cbm-section-shadow rounded-3 form-sign-area">
+                <div class="text-center mb-4">
+                    <a href="/">
+                        <img src="../assets/images/logo/logo-a.png" height="39">
+                    </a>
+                </div>
                 <form action="/auth/login" method="post">
                     <div class="row g-3">
                         <div class="fields-form on-progress">
@@ -37,11 +37,11 @@
                                 <div class="col-12">
                                     <label for="phone_number" class="form-label">Nomor Whatsapp</label>
                                     <input type="number" class="form-control" id="phone_number"
-                                        placeholder="Whatsapp number [628xxxxxxx]" name="phone_number" required>
+                                        placeholder="Nomor WhatsApp [628xxxxxxx]" name="phone_number" required>
                                 </div>
                                 <div class="col-12">
                                     <div class="float-end">
-                                        <a href="lupa-sandi" class="text-primary text-decoration-none"
+                                        <a href="lupa-kata-sandi" class="text-primary text-decoration-none"
                                             style="font-size:0.8rem!important"><b>Lupa Kata Sandi?</b></a>
                                     </div>
                                     <label for="password" class="form-label">Kata Sandi</label>
@@ -60,8 +60,12 @@
                             <% } %>
                         </div>
                         <div class="mt-3 text-muted text-center" style="font-size:0.9rem!important">
-                            Belum punya akun? <a href="daftar"
-                                class="text-primary text-decoration-none"><b>Daftar</b></a>
+                            Belum punya akun?
+                            <% if (locals.error) { %>
+                            <a href="../daftar" class="text-primary text-decoration-none"><b>Daftar</b></a>
+                            <% } else { %>
+                            <a href="daftar" class="text-primary text-decoration-none"><b>Daftar</b></a>
+                            <% } %>
                         </div>
                     </div>
                 </form>

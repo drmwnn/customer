@@ -24,6 +24,15 @@ router.get('/daftar', (req, res) => {
     res.render('pages/daftar')
 });
 
+router.get('/lupa-kata-sandi', (req, res) => {
+    res.render('pages/lupa-kata-sandi')
+});
+
+router.get('/lupa-kata-sandi-verification', (req, res) => {
+    res.render('pages/lupa-kata-sandi-verification')
+});
+
+
 router.get('/profil', (req, res) => {
     res.render('pages/profil')
 });
@@ -138,6 +147,8 @@ router.get('/youtube-premium', (req, res) => {
     res.render('pages/youtube-premium')
 });
 
-
+router.get('/pembayaran', (req, res) => {
+    res.render('pages/pembayaran')
+});
 
 module.exports = router;

@@ -21,14 +21,15 @@
 </head>
 
 <body>
+    <%- include('../layouts/none.ejs'); %>
     <div class="container-login">
         <div class="form-signin">
-            <div class="text-center mb-4">
-                <a href="/">
-                    <img src="assets/images/logo/logo-a.png" height="39">
-                </a>
-            </div>
             <div class="bg-white cbm-section-shadow rounded-3 form-sign-area">
+                <div class="text-center mb-4">
+                    <a href="/">
+                        <img src="assets/images/logo/logo-a.png" height="39">
+                    </a>
+                </div>
                 <form>
                     <div class="row g-3">
                         <div class="fields-form on-progress">
@@ -47,7 +48,7 @@
                                 <div class="col-12">
                                     <label for="phone_number" class="form-label">Nomor Whatsapp</label>
                                     <input type="number" class="form-control" id="phone_number"
-                                        placeholder="Whatsapp number [628xxxxxxx]" name="phone_number" required>
+                                        placeholder="Nomor WhatsApp [628xxxxxxx]" name="phone_number" required>
                                 </div>
                                 <div class="col-12">
                                     <label for="password" class="form-label">Kata Sandi</label>
@@ -55,6 +56,11 @@
                                         <input type="password" class="form-control" id="password" name="password"
                                             required>
                                         <input type="checkbox" class="form-label" onclick="myFunction()"> Show Password
+                                    </div>
+                                    <div class="mt-3 text-muted" style="font-size:0.7rem!important">
+                                        <input type="checkbox" required> Dengan klik "Daftar" berarti anda setuju dengan
+                                        <a href="kebijakan-privasi" style="text-decoration: none;color: #0d6efd;">
+                                            <span>kebijakan privasi</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -66,7 +72,7 @@
                             </button>
                         </div>
                         <div class="mt-3 text-muted text-center" style="font-size:0.9rem!important">
-                            Sudah punya akun? <a href="masuk" class="text-primary text-decoration-none"><b>Masuk</b></a>
+                            Sudah punya akun? <a href="login" class="text-primary text-decoration-none"><b>Masuk</b></a>
                         </div>
                     </div>
                 </form>
