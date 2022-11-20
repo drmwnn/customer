@@ -3,8 +3,6 @@ $(document).ready(function() {
         var harga = $("input[name='denom']:checked").val();
         var payment = $("input[name='payment']:checked").val();
 
-        
-        
         fetch("https://produk.asepdarmawan3.repl.co").then((data) => {
             return data.json();
         }).then((objectData) => {
