@@ -1,5 +1,6 @@
 const express = require('express');
 const User = require('../models/user')
+const price = require('../models/price');
 const router = express.Router();
 
 router.get('/logout', (request, response) => {

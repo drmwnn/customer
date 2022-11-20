@@ -12,7 +12,7 @@
                     <div class="left">
                         <b><i class="fas fa-store"></i> Retail Outlet</b>
                     </div>
-                    <div class="right"><b>Rp10.000</b></div>
+                    <div class="right" id="price_retail"></div>
                 </div>
                 <div class="btn-group button-action-payment">
                     <div class="row row-cols-lg-2 row-cols-sm-1 list-payment-method">
@@ -20,12 +20,13 @@
                         <!-- Alfamart -->
                         <div class="col-lg-6 mt-3">
                             <div class="list-group">
-                                <input type="radio" class="btn-check" name="payment" id="alfamart" autocomplete="off">
+                                <input type="radio" class="btn-check" name="payment" id="alfamart" value="alfamart"
+                                    autocomplete="off">
                                 <label class="btn btn-outline-info" style="border-color: #b2c7d5;" for="alfamart">
                                     <div class="payment-item">
                                         <div class="info-top">
                                             <img src="assets/images/payment/alfamart.svg">
-                                            <b style="color: black;">Rp10.000</b>
+                                            <a style="color: black;" id="price_alfamart"></a>
                                         </div>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="info-bottom" style="color: black;">
@@ -103,7 +104,7 @@
                     <div class="left">
                         <b><i class="fas fa-wallet"></i> E-Wallet</b>
                     </div>
-                    <div class="right"><b>Rp10.000</b></div>
+                    <div class="right" id="price_ewallet"></div>
                 </div>
                 <div class="button-action-payment">
 
@@ -257,7 +258,7 @@
                     <div class="left">
                         <b><i class="fas fa-university"></i> Bank Transfer</b>
                     </div>
-                    <div class="right"><b>Rp10.000</b></div>
+                    <div class="right" id="price"></div>
                 </div>
                 <div class="button-action-payment">
                     <div class="row row-cols-lg-2 row-cols-sm-1 list-payment-method">
@@ -270,7 +271,7 @@
                                     <div class="payment-item">
                                         <div class="info-top">
                                             <img src="assets/images/payment/bca.svg">
-                                            <b style="color: black;">Rp10.000</b>
+                                            <a style="color: black;" id="price"></a>
                                         </div>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="info-bottom" style="color: black;">

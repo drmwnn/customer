@@ -31,7 +31,7 @@ mongoose.connect(('mongodb://127.0.0.1:27017/AsdarrID'), (err,res) => {
     
 const index = require('./routes/index');
 const user = require('./routes/auth');
-const { request, response } = require('express');
+
 const port = process.env.PORT || 3000;
 app.use('/', index);
 app.use('/auth', user);

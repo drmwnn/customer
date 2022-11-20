@@ -41,8 +41,13 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="float-end">
+                                        <% if (locals.error) { %>
+                                        <a href="../lupa-kata-sandi" class="text-primary text-decoration-none"
+                                            style="font-size:0.8rem!important"><b>Lupa Kata Sandi?</b></a>
+                                        <% } else { %>
                                         <a href="lupa-kata-sandi" class="text-primary text-decoration-none"
                                             style="font-size:0.8rem!important"><b>Lupa Kata Sandi?</b></a>
+                                        <% } %>
                                     </div>
                                     <label for="password" class="form-label">Kata Sandi</label>
                                     <div class="form-group-password">

@@ -1,6 +1,7 @@
 const { request, response } = require('express');
 const express = require('express');
 const user = require('../models/user');
+const price = require('../models/price');
 const router = express.Router()
 
 router.get('/', (req, res) => {
@@ -52,6 +53,8 @@ router.get('/voucher', (req, res) => {
 
 //produk
 router.get('/arena-of-valor', (req, res) => {
+    // var value = request.body.denom.val();
+    // console.log(value);
     res.render('pages/arena-of-valor')
 });
 
