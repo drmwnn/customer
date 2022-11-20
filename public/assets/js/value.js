@@ -10,9 +10,23 @@ $(document).ready(function() {
         }).then((objectData) => {
             let tableData = "";
             console.log(objectData[0].price);
-             tableData = `<b>Rp${objectData[harga].price}</b>`;
-             document.getElementById("price").innerHTML = tableData;
-             document.getElementById("price_alfamart").innerHTML = tableData;
+            tableData = `<b>Rp${objectData[harga].price}</b>`;
+            document.getElementById("price_retail").innerHTML = tableData;
+            document.getElementById("price_alfamart").innerHTML = tableData;
+            document.getElementById("price_alfamidi").innerHTML = tableData;
+            document.getElementById("price_indomaret").innerHTML = tableData;
+            document.getElementById("price_ewallet").innerHTML = tableData;
+            document.getElementById("price_gopay").innerHTML = tableData;
+            document.getElementById("price_linkaja").innerHTML = tableData;
+            document.getElementById("price_shopeepay").innerHTML = tableData;
+            document.getElementById("price_ovo").innerHTML = tableData;
+            document.getElementById("price_dana").innerHTML = tableData;
+            document.getElementById("price_qris").innerHTML = tableData;
+            document.getElementById("price_bank").innerHTML = tableData;
+            document.getElementById("price_bca").innerHTML = tableData;
+            document.getElementById("price_bri").innerHTML = tableData;
+            document.getElementById("price_bni").innerHTML = tableData;
+            document.getElementById("price_mandiri").innerHTML = tableData;
         });
     });
 });
