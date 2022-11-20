@@ -2,6 +2,8 @@ $(document).ready(function() {
     $("input[type='radio']").click(function() {
         var harga = $("input[name='denom']:checked").val();
         var payment = $("input[name='payment']:checked").val();
+
+        
         
         fetch("https://produk.asepdarmawan3.repl.co").then((data) => {
             return data.json();
@@ -28,6 +30,5 @@ $(document).ready(function() {
         });
 
         console.log(payment);
-
     });
 });

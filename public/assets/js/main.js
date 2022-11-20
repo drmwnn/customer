@@ -1,39 +1,44 @@
 function openPaymentDrawer(elem) {
     var $this = $(elem);
-
-    $('.payment-drawwer').not(this).each(function () {
-        var $parents = $(this);
-        $parents.find('.button-action-payment').slideUp(function () {
-            $parents.removeClass('active');
-        });
-
-        $parents.find('.short-payment-support-info').find('img').slideDown();
-        $parents.find('.short-payment-support-info').find('i').removeClass('fa-chevron-up').addClass(
-            'fa-chevron-down');
-    });
-
-    var $parents = $this.parents('.child-box');
-
-    if (!$parents.find('.button-action-payment').is(":hidden")) {
-        $parents.find('.button-action-payment').slideUp(function () {
-            $parents.removeClass('active');
-        });
-
-        $parents.find('.short-payment-support-info').find('img').slideDown();
-        $parents.find('.short-payment-support-info').find('.fa-chevron-up').removeClass('fa-chevron-up')
-            .addClass('fa-chevron-down');
-
-    } else {
-        $parents.find('.button-action-payment').slideDown(function () {
-            $parents.addClass('active');
-        });
-        $parents.find('.short-payment-support-info').find('img').slideUp();
-        $parents.find('.short-payment-support-info').find('.fa-chevron-down').addClass('fa-chevron-up')
-            .removeClass('fa-chevron-down');
+    var harga = $("input[name='denom']:checked").val();
+    if(harga == undefined){
+        alert("Pilih Jumlah Order Terlebih Dahulu!");
+        return false;
     }
+    else{
+        $('.payment-drawwer').not(this).each(function () {
+            var $parents = $(this);
+            $parents.find('.button-action-payment').slideUp(function () {
+                $parents.removeClass('active');
+            });
+    
+            $parents.find('.short-payment-support-info').find('img').slideDown();
+            $parents.find('.short-payment-support-info').find('i').removeClass('fa-chevron-up').addClass(
+                'fa-chevron-down');
+        });
+    
+        var $parents = $this.parents('.child-box');
+    
+        if (!$parents.find('.button-action-payment').is(":hidden")) {
+            $parents.find('.button-action-payment').slideUp(function () {
+                $parents.removeClass('active');
+            });
+    
+            $parents.find('.short-payment-support-info').find('img').slideDown();
+            $parents.find('.short-payment-support-info').find('.fa-chevron-up').removeClass('fa-chevron-up')
+                .addClass('fa-chevron-down');
+    
+        } else {
+            $parents.find('.button-action-payment').slideDown(function () {
+                $parents.addClass('active');
+            });
+            $parents.find('.short-payment-support-info').find('img').slideUp();
+            $parents.find('.short-payment-support-info').find('.fa-chevron-down').addClass('fa-chevron-up')
+                .removeClass('fa-chevron-down');
+        }
+    }
+    
 }
-
-
 
 //validasi form
 function radioValidation() {
