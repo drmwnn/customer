@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const session = require('express-session')
 const mongoose = require('mongoose')
 const app = express()
+const port = process.env.PORT || 3000;
 
 
 app.use(express.static('public'));
@@ -31,10 +32,12 @@ mongoose.connect(('mongodb://127.0.0.1:27017/AsdarrID'), (err,res) => {
     
 const index = require('./routes/index');
 const user = require('./routes/auth');
+const sale = require('./routes/sale');
 
-const port = process.env.PORT || 3000;
+
 app.use('/', index);
 app.use('/auth', user);
+app.use('/sale', sale);
 //port 
 app.listen(port, ()=> {
     console.log(`Server sudah berjalan di port ${port}`);

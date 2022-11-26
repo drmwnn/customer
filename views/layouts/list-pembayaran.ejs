@@ -387,33 +387,41 @@
 
             </div>
             <div class="form-group">
-                <label for="nama" class="form-label">Nama Lengkap</label>
-                <% if (locals.isLoggedIn) { %>
+                <label for="name" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="name" placeholder="AsdarrID" name="name" required>
+                <!-- <% if (locals.isLoggedIn) { %>
                 <input class="form-control" type="text" placeholder="pitryannn" aria-label="Disabled input example"
                     disabled>
                 <% } else { %>
-                <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama">
-                <% } %>
+                <input type="text" class="form-control" id="name" placeholder="AsdarrID" name="name" required>
+                <% } %> -->
             </div>
             <div class="form-group">
-                <label for="whatsapp_number" class="form-label">Nomor Whatsapp</label>
-                <% if (locals.isLoggedIn) { %>
+                <label for="phone_number" class="form-label">Nomor Whatsapp</label>
+                <input type="number" class="form-control" id="phone_number" placeholder="Nomor WhatsApp [628xxxxxxx]"
+                    name="phone_number" required>
+                <!-- <% if (locals.isLoggedIn) { %>
                 <input class="form-control" type="text" placeholder="628123456789" aria-label="Disabled input example"
                     disabled>
                 <% } else { %>
-                <input type="number" class="form-control" name="whatsapp_number" id="whatsapp_number"
-                    placeholder="Nomor Whatsapp [628xxxxx]">
-                <% } %>
+                <input type="number" class="form-control" id="phone_number" placeholder="Nomor WhatsApp [628xxxxxxx]"
+                    name="phone_number" required>
+                <% } %> -->
             </div>
         </div>
     </div>
 </div>
 
-<div class="float-end">
-    <a href="pembayaran" class="btn btn-primary" onclick="return radioValidation();"> <svg
-            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3"
+<div class="float-end" style="width: 20%;">
+    <input type="hidden" name="action" value="login">
+    <button id="login-submit" class="w-100 btn btn-lg btn-primary p-1 fs-6" type="submit"
+        onclick="return radioValidation();">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3"
             viewBox="0 0 16 16">
             <path
                 d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-        </svg> Beli Sekarang</a>
+        </svg> Beli Sekarang
+    </button>
+
+
 </div>

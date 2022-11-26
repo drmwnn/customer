@@ -1,7 +1,8 @@
 const { request, response } = require('express');
 const express = require('express');
-const user = require('../models/user');
-const price = require('../models/price');
+const user = require('../models/member');
+const price = require('../models/produk');
+const sale = require('../models/sale');
 const router = express.Router()
 
 router.get('/', (req, res) => {
@@ -21,8 +22,8 @@ router.get('/login', (req, res) => {
     res.render('pages/login')
 });
 
-router.get('/daftar', (req, res) => {
-    res.render('pages/daftar')
+router.get('/register', (req, res) => {
+    res.render('pages/register')
 });
 
 router.get('/lupa-kata-sandi', (req, res) => {

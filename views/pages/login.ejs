@@ -34,6 +34,20 @@
                     <div class="row g-3">
                         <div class="fields-form on-progress">
                             <div class="row g-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" value="1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Default radio
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" value="2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Default checked radio
+                                    </label>
+                                </div>
                                 <div class="col-12">
                                     <label for="phone_number" class="form-label">Nomor Whatsapp</label>
                                     <input type="number" class="form-control" id="phone_number"
@@ -64,14 +78,13 @@
                         </div>
                         <div class="col-12">
                             <input type="submit" class="w-100 btn btn-primary" name="submit" value="login">
-
                         </div>
                         <div class="mt-3 text-muted text-center" style="font-size:0.9rem!important">
                             Belum punya akun?
                             <% if (locals.error) { %>
-                            <a href="../daftar" class="text-primary text-decoration-none"><b>Daftar</b></a>
+                            <a href="../register" class="text-primary text-decoration-none"><b>Daftar</b></a>
                             <% } else { %>
-                            <a href="daftar" class="text-primary text-decoration-none"><b>Daftar</b></a>
+                            <a href="register" class="text-primary text-decoration-none"><b>Daftar</b></a>
                             <% } %>
                         </div>
                     </div>
