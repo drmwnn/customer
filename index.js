@@ -22,14 +22,14 @@ app.use((request, response, next) => {
 })
 
 mongoose.connect(('mongodb://127.0.0.1:27017/AsdarrID'), (err,res) => {
-        if(err){
-            console.error(err);
-        }
-        else{
-            console.log('Database Sudah terhubung')
-        }
-    })
-    
+    if(err){
+        console.error(err);
+    }
+    else{
+        console.log('Database Sudah terhubung')
+    }
+})
+
 const index = require('./routes/index');
 const user = require('./routes/auth');
 const sale = require('./routes/sale');
@@ -38,6 +38,7 @@ const sale = require('./routes/sale');
 app.use('/', index);
 app.use('/auth', user);
 app.use('/sale', sale);
+
 //port 
 app.listen(port, ()=> {
     console.log(`Server sudah berjalan di port ${port}`);

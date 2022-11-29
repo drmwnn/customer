@@ -2,8 +2,8 @@ const { request, response } = require('express');
 const express = require('express');
 const user = require('../models/member');
 const price = require('../models/produk');
-const sale = require('../models/sale');
-const router = express.Router()
+const Sale = require('../models/sale');
+const router = express.Router();
 
 router.get('/', (req, res) => {
     res.render('pages/index')
@@ -54,8 +54,6 @@ router.get('/voucher', (req, res) => {
 
 //produk
 router.get('/arena-of-valor', (req, res) => {
-    // var value = request.body.denom.val();
-    // console.log(value);
     res.render('pages/arena-of-valor')
 });
 
@@ -151,8 +149,37 @@ router.get('/youtube-premium', (req, res) => {
     res.render('pages/youtube-premium')
 });
 
-router.get('/pembayaran', (req, res) => {
-    res.render('pages/pembayaran')
+router.get("/pembayaran",(request, response) => {
+    const query2 = Sale.findOne({ no: request.session.no });
+        query2.exec((error, data) => {
+            console.log(data);
+            nomor = data.no;
+            category = data.game,
+            publisher = data.publisher,
+            harga = data.price;
+            pembayaran = data.stat_pembayaran;
+            transaksi = data.stat_transaksi;
+            total = data.price;
+            biaya_layanan = 0;
+            metode = data.payment;
+            user_id = data.user_id;
+            item = data.product;
+            waktu = data.date;
+
+        query2.getFilter();
+        response.render('pages/pembayaran', {
+            category: category, 
+            publisher: publisher,
+            user_id: user_id,
+            product: item, 
+            date:waktu, 
+            price: harga, 
+            id: nomor, 
+            stat_pembayaran: pembayaran,
+            stat_transaksi: transaksi,
+            total: total
+        });
+    });
 });
 
 module.exports = router;

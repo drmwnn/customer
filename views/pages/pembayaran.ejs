@@ -2,14 +2,104 @@
 <html lang="en">
 
 <head>
-    <%- include('../layouts/header.ejs'); %>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/logo/shorcut.png" />
+
+    <!-- CSS only bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- end -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="../assets/css/style.css">
     <title>Pembayaran</title>
 </head>
 
 <body>
     <%- include('../layouts/none.ejs'); %>
-    <%- include('../layouts/navbar.ejs'); %>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;line-height: 50%;"
+        id="rightMenu">
+        <button onclick="closeRightMenu()" class=" w3-button w3-large"><svg xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg></button>
+        <div style="line-height: 70%;">
+            <a href="/" class="w3-bar-item w3-button" style="text-align: right;">Home</a>
+            <a href="../game" class="w3-bar-item w3-button" style="text-align: right;">Game</a>
+            <a href="../voucher" class="w3-bar-item w3-button" style="text-align: right;">Voucher</a>
+            <a href="../entertainment" class="w3-bar-item w3-button"
+                style="text-align: right;margin-bottom: 5px;">Entertainment</a>
+        </div>
+        <% if (locals.isLoggedIn) { %>
+        <div class="w3-border-top" style="line-height: 70%;">
+            <a href="../profil" class="w3-bar-item w3-button" style="text-align: right;margin-top: 5px;">Profile</a>
+            <a href="../profil" class="w3-bar-item w3-button" style="text-align: right;">Riwayat Transaksi</a>
+        </div>
+        <div class="w3-border-top" style="line-height: 70%;">
+            <a href="../auth/logout" class="w3-bar-item w3-button" style="text-align: right;margin-top: 5px;">Keluar</a>
+        </div>
+        <% } else { %>
+        <div class="w3-border-top" style="line-height: 70%;">
+            <a href="../login" class="w3-bar-item w3-button" style="text-align: right;margin-top: 5px;">Masuk</a>
+            <a href="../register" class="w3-bar-item w3-button" style="text-align: right;">Daftar</a>
+        </div>
+        <% } %>
+
+    </div>
+    <div class="cmb-header-shadow" id="navbar">
+        <div class="container">
+            <header class="d-flex align-items-center justify-content-center justify-content-md-between py-3">
+                <!-- logo -->
+                <a href="/" class="d-flex align-items-center">
+                    <img src="../assets/images/logo/logo-a.png" class="logo" alt=".." height="40">
+                </a>
+                <!-- end logo -->
+                <nav class="cbm-main-menu" id="navbar-menu">
+                    <ul class="nav fs-5 navbar-brand">
+                        <li><a href="/" class="nav-link">Home</a></li>
+                        <li><a href="../game" class="nav-link">Game</a></li>
+                        <li><a href="../voucher" class="nav-link">Voucher</a></li>
+                        <li><a href="../entertainment" class="nav-link">Entertainment</a></li>
+                    </ul>
+                </nav>
+                <!-- button masuk/daftar -->
+                <% if (locals.isLoggedIn) { %>
+                <div class="text-end">
+                    <a href="../profil" class="log-img"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                        </svg></a>
+                    <button class="btn btn-light sidebar-menu" type="button"><img src="../assets/images/logo/bar.svg"
+                            alt="user" width="20" onclick="openRightMenu();">
+                    </button>
+                </div>
+                <% } else { %>
+                <div class="text-end">
+                    <a href="../login" class="btn btn-outline-primary me-2 flex-shrink-0 log-img">Masuk</a>
+                    <a href="../register" class="btn btn-primary log-img" style="color: white;">Daftar</a>
+                    <button class="btn btn-light sidebar-menu" type="button"><img src="../assets/images/logo/bar.svg"
+                            alt="user" width="20" onclick="openRightMenu();">
+                </div>
+                <% } %>
+
+                <!-- end button -->
+            </header>
+        </div>
+    </div>
 
     <div class="site-main" onclick="closeRightMenu()">
 
@@ -19,18 +109,22 @@
                 <div class="row g-0 bg-white cbm-section-shadow rounded-3">
                     <div class="col-md-7 col-lg-8 border-end p-5 order-payment-info-section">
                         <div class="payment-notice-top text-center">
-                            <h5 class="fw-600"><b>Pembayaran </b><b class="text-primary">#100001</b></h5>
+                            <% if (locals.id) { %>
+                            <h5 class="fw-600"><b>Pembayaran </b><b class="text-primary">#<%= id %></b></h5>
+                            <% } %>
                             <p>Pastikan anda melakukan pembayaran sebelum melewati batas</p>
                             <p>pembayaran dan dengan nominal yang tepat</p>
 
                         </div>
                         <div id="total-bill" class="text-center bank_transfer">
                             <div class="total-bill-price">
+                                <% if (locals.price) { %>
                                 <div class="amount-bill-price d-flex align-items-center"
                                     style="justify-content: center!important;">
-                                    <b>Rp10.<span class="pay-code-unique" style="color: red;">815</span> </b>
+                                    <b>Rp<%= price %> </b>
                                 </div>
-                                <h5 style="color: red;"><b>Harap transfer sampai 3 digit terakhir!</b></h5>
+                                <% } %>
+                                <!-- <h5 style="color: red;"><b>Harap transfer sampai 3 digit terakhir!</b></h5> -->
 
 
                             </div>
@@ -39,20 +133,27 @@
                             <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
                                 <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                                     <h6 class="mb-0 text-muted">Nomor Transaksi</h6>
-                                    <p class="mb-0 fw-600">#100001</p>
+                                    <% if (locals.id) { %>
+                                    <p class="mb-0 fw-600">#<%= id %></p>
+                                    <% } %>
                                 </div>
                             </div>
                             <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
                                 <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                                     <h6 class="mb-0 text-muted">Status Pembayaran</h6>
-                                    <p class="mb-0 border border-warning text-warning badge text-wrap">Belum Dibayar</p>
+                                    <% if (locals.stat_pembayaran) { %>
+                                    <p class="mb-0 border border-warning text-warning badge text-wrap">
+                                        <%= stat_pembayaran %></p>
+                                    <% } %>
                                 </div>
                             </div>
                             <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
                                 <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                                     <h6 class="mb-0 text-muted">Status Transaksi</h6>
-                                    <p class="mb-0 border border-warning text-warning badge text-wrap">Belum Diproses
-                                    </p>
+                                    <% if (locals.stat_transaksi) { %>
+                                    <p class="mb-0 border border-warning text-warning badge text-wrap">
+                                        <%= stat_transaksi %> </p>
+                                    <% } %>
                                 </div>
                             </div>
                         </div>
@@ -78,7 +179,9 @@
                                     <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
                                         <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                                             <h6 class="mb-0 text-muted">Total Pembayaran</h6>
-                                            <p class="mb-0">Rp10.815</p>
+                                            <% if (locals.total) { %>
+                                            <p class="mb-0">Rp<%= total %></p>
+                                            <% } %>
                                         </div>
                                     </div>
                                     <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
@@ -92,7 +195,7 @@
                                             <h6 class="mb-0 text-muted">Metode Pembayaran</h6>
                                             <div class="mb-0 text-right">
                                                 <div class="d-flex flex-row align-items-center">
-                                                    <div class="me-2"><img src="assets/images/payment/bca.svg"
+                                                    <div class="me-2"><img src="../../assets/images/payment/bca.svg"
                                                             width="auto" height="15px" /></div>
                                                 </div>
                                             </div>
@@ -140,8 +243,12 @@
                                             alt="" class="rounded-3" height="100px">
                                     </div>
                                     <div class="product-data">
-                                        <h1 class="fs-5 mb-1">Arena of Valor</h1>
-                                        <div class="fs-6 text-muted">Garena</div>
+                                        <% if (locals.category) { %>
+                                        <h1 class="fs-5 mb-1"><%= category %></h1>
+                                        <% } %>
+                                        <% if (locals.publisher) { %>
+                                        <div class="fs-6 text-muted"><%= publisher %></div>
+                                        <% } %>
                                     </div>
                                 </div>
                                 <div class="list-group list-group-flush">
@@ -149,15 +256,20 @@
                                         <div class="d-flex gap-2 w-100 justify-content-between">
                                             <div>
                                                 <h6 class="mb-0 text-muted">User ID</h6>
-                                                <p class="mb-0">692768360760477</p>
+                                                <% if (locals.user_id) { %>
+                                                <p class="mb-0"><%= user_id %></p>
+                                                <% } %>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
                                         <div class="d-flex gap-2 w-100 justify-content-between">
                                             <div>
+
                                                 <h6 class="mb-0 text-muted">Item</h6>
-                                                <p class="mb-0">40 Vouchers</p>
+                                                <% if (locals.product) { %>
+                                                <p class="mb-0"><%= product %></p>
+                                                <% } %>
                                             </div>
                                         </div>
                                     </div>
@@ -165,7 +277,9 @@
                                         <div class="d-flex gap-2 w-100 justify-content-between">
                                             <div>
                                                 <h6 class="mb-0 text-muted">Waktu Pemesanan</h6>
-                                                <p class="mb-0">25 September 2022 10:29 WIB</p>
+                                                <% if (locals.date) { %>
+                                                <p class="mb-0"><%= date %></p>
+                                                <% } %>
                                             </div>
                                         </div>
                                     </div>
@@ -193,7 +307,8 @@
                     <div class="modal-header">
                         <div class="modal-title">
                             <div class="d-flex flex-row align-items-center">
-                                <div class="me-3"><img src="assets/images/payment/bca.svg" width="auto" height="20px" />
+                                <div class="me-3"><img src="../assets/images/payment/bca.svg" width="auto"
+                                        height="20px" />
                                 </div>
                                 <div class="fw-bold">
                                     Petunjuk Pembayaran Bank BCA </div>
@@ -246,8 +361,123 @@
         </script>
     </div>
     <br><br>
-    <%- include('../layouts/footer.ejs'); %>
-    <script src="assets/js/main.js"></script>
+    <!-- deskripsi -->
+    <div class="bg-primary bg-gradient">
+        <div class="container">
+            <div class="py-4 text-white desc">
+                <h2 class="display-6 fw-600 fs-5">
+                    <b>AsdarrID: Top-up Produk Digital Legal, Murah, Cepat, dan Aman.</b>
+                </h2>
+                <p class="fs-6 m-0">Tempat top-up game dan voucher termurah dan terpercaya. Beli Voucher Digital dalam
+                    satu website dengan harga terbaik, banyak bonus dan promo diskon paling murah langsung dalam satu
+                    websites.</p>
+            </div>
+        </div>
+    </div>
+    <!-- end deskripsi -->
+
+    <div class="footer mt-auto border-top">
+        <!-- metode pembayaran yang didukung -->
+        <div class="container">
+            <div class="col-md-12 col-12">
+                <div class="row pt-4">
+                    <div class="col-md-12 text-center mb-3">
+                        <h5 class="mb-1">Didukung Pembayaran</h5>
+                    </div>
+                    <div class="text-center list-support-payment" style="pointer-events: none;">
+                        <img src="../assets/images/payment/bca.svg">
+                        <img src="../assets/images/payment/bni.svg">
+                        <img src="../assets/images/payment/bri.svg">
+                        <img src="../assets/images/payment/mandiri.svg">
+                        <img src="../assets/images/payment/alfamart.svg">
+                        <img src="../assets/images/payment/indomaret.svg">
+                        <img src="../assets/images/payment/alfamidi.svg">
+                        <img src="../assets/images/payment/gopay.svg">
+                        <img src="../assets/images/payment/linkaja.svg">
+                        <img src="../assets/images/payment/shopeepay.svg">
+                        <img src="../assets/images/payment/ovo.svg">
+                        <img src="../assets/images/payment/dana.svg">
+                        <img src="../assets/images/payment/qris.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end pembayaran -->
+
+        <footer>
+            <div class="container">
+                <div class="row pt-5 pb-4 mt-4 border-top justify-content-center">
+
+                    <div class="col-lg-3 col-6">
+                        <h5>Sitelinks</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="../game" class="text-decoration-none p-0 text-muted"
+                                    style="font-size: medium;">Game</a></li>
+                            <li class="nav-item mb-2"><a href="../voucher" class="text-decoration-none p-0 text-muted"
+                                    style="font-size: medium;">Voucher</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="../entertainment"
+                                    class="text-decoration-none p-0 text-muted"
+                                    style="font-size: medium;">Entertainment</a></li>
+                            <br>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+                        <h5>Ikuti Kami</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a href="https://www.facebook.com/profile.php?id=100055745330328" target="_blank"
+                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Facebook</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="https://instagram.com/asdarr.id?igshid=YmMyMTA2M2Y=" target="_blank"
+                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Instagram</a>
+                            </li>
+                            <br>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+                        <h5>AsdarrID</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="../tentang-kami"
+                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Tentang
+                                    Kami</a></li>
+                            <li class="nav-item mb-2"><a href="../kebijakan-privasi"
+                                    class="text-decoration-none p-0 text-muted" style="font-size: medium;">Kebijakan
+                                    Privasi</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+                        <h5>Kontak Kami</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a href="mailto:asdarrid.cs@gmail.com" class="text-decoration-none p-0 text-muted"
+                                    style="text-decoration: none;font-size: medium;"><span>asdarrid.cs@gmail.com</span></a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="https://wa.me/6283123658885" target="_blank"
+                                    class="text-decoration-none p-0 text-muted"
+                                    style="font-size: medium;">+6283-123-65-8885</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2022. All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <a class='fixed-whatsapp' href='https://api.whatsapp.com/send?phone=6283123658885' rel='nofollow noopener'
+        target='_blank' title='Whatsapp'>
+        <script src="../assets/js/value.js"></script>
+        <script src="../assets/js/main.js"></script>
 </body>
 
 </html>
