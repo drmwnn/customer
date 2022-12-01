@@ -34,11 +34,6 @@ router.get('/lupa-kata-sandi-verification', (req, res) => {
     res.render('pages/lupa-kata-sandi-verification')
 });
 
-
-router.get('/profil', (req, res) => {
-    res.render('pages/profil')
-});
-
 //kategori
 router.get('/game', (req, res) => {
     res.render('pages/game')
@@ -220,6 +215,17 @@ router.get("/pembayaran",(request, response) => {
             metode_img : metode_img,
             norek: norek
             //cabang: cabang
+        });
+    });
+});
+
+router.get('/profil', (request, response) => {
+    const query2 = Sale.find({ phone_number: request.session.user.phone_number });
+        query2.exec((error, data) => {
+            console.log(data);
+        query2.getFilter();
+        response.render('pages/profil', {
+            data: data
         });
     });
 });

@@ -58,6 +58,7 @@
                             <div class="card card-rw">
                                 <div class="card-body">
                                     <table class="riwayat-table" style="border-top: none;">
+
                                         <thead>
                                             <th> No Transaksi </th>
                                             <th> Tanggal </th>
@@ -65,10 +66,11 @@
                                             </tr>
                                         </thead>
 
+                                        <%data.forEach(history => {%>
                                         <tbody>
                                             <td>
                                                 <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    12346 </a> </td>
+                                                    <%= history.no %> </a> </td>
                                             <!-- Modal -->
                                             <div class="modal fade" id="exampleModal" tabindex="-1"
                                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -83,18 +85,21 @@
                                                         <div class="modal-body">
                                                             <ul>
                                                                 <li style="list-style-type: none;"> Nomor Transaksi
-                                                                    : 12346 </li>
+                                                                    : <%= history.no %> </li>
                                                                 <li style="list-style-type: none;"> Tanggal :
-                                                                    08/09/2022 </li>
-                                                                <li style="list-style-type: none;"> Nama Pengguna :
-                                                                    Chunchunmadu
-                                                                </li>
+                                                                    <%= history.date %> </li>
                                                                 <li style="list-style-type: none;"> Metode
-                                                                    Pembayaran : Dana </li>
+                                                                    Pembayaran : <%= history.payment %> </li>
                                                                 <li style="list-style-type: none;"> Nominal :
-                                                                    Rp.1.000.000 </li>
-                                                                <li style="list-style-type: none;"> Status : Belum
-                                                                    Dibayar </li>
+                                                                    Rp.<%= history.price %> </li>
+                                                                <li style="list-style-type: none;"> Kategori :
+                                                                    <%= history.game %> </li>
+                                                                <li style="list-style-type: none;"> produk :
+                                                                    <%= history.product %> </li>
+                                                                <li style="list-style-type: none;"> Status pembayaran :
+                                                                    <%= history.stat_transaksi %> </li>
+                                                                <li style="list-style-type: none;"> Status transaksi :
+                                                                    <%= history.stat_transaksi %> </li>
                                                             </ul>
                                                         </div>
                                                         <br>
@@ -102,136 +107,11 @@
                                                 </div>
                                             </div>
                                             </td>
-                                            <td> 08/09/2022 </td>
-                                            <td> pubji </td>
+                                            <td> <%= history.date %> </td>
+                                            <td> <%= history.product %> </td>
                                             </tr>
                                         </tbody>
-
-                                        <tbody>
-                                            <td>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    12346 </a> </td>
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="exampleModal" tabindex="-1"
-                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">
-                                                                Detail</h1>
-                                                            <button type="button" class="btn-close"
-                                                                data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <ul>
-                                                                <li style="list-style-type: none;"> Nomor Transaksi
-                                                                    : 12346 </li>
-                                                                <li style="list-style-type: none;"> Tanggal :
-                                                                    08/09/2022 </li>
-                                                                <li style="list-style-type: none;"> Nama Pengguna :
-                                                                    Chunchunmadu
-                                                                </li>
-                                                                <li style="list-style-type: none;"> Metode
-                                                                    Pembayaran : Dana </li>
-                                                                <li style="list-style-type: none;"> Nominal :
-                                                                    Rp.1.000.000 </li>
-                                                                <li style="list-style-type: none;"> Status : Belum
-                                                                    Dibayar </li>
-                                                            </ul>
-                                                        </div>
-                                                        <br>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </td>
-                                            <td> 08/09/2022 </td>
-                                            <td> pubji </td>
-                                            </tr>
-                                        </tbody>
-
-                                        <tbody>
-                                            <td>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    12346 </a> </td>
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="exampleModal" tabindex="-1"
-                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">
-                                                                Detail</h1>
-                                                            <button type="button" class="btn-close"
-                                                                data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <ul>
-                                                                <li style="list-style-type: none;"> Nomor Transaksi
-                                                                    : 12346 </li>
-                                                                <li style="list-style-type: none;"> Tanggal :
-                                                                    08/09/2022 </li>
-                                                                <li style="list-style-type: none;"> Nama Pengguna :
-                                                                    Chunchunmadu
-                                                                </li>
-                                                                <li style="list-style-type: none;"> Metode
-                                                                    Pembayaran : Dana </li>
-                                                                <li style="list-style-type: none;"> Nominal :
-                                                                    Rp.1.000.000 </li>
-                                                                <li style="list-style-type: none;"> Status : Belum
-                                                                    Dibayar </li>
-                                                            </ul>
-                                                        </div>
-                                                        <br>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </td>
-                                            <td> 08/09/2022 </td>
-                                            <td> pubji </td>
-                                            </tr>
-                                        </tbody>
-
-                                        <tbody>
-                                            <td>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    12346 </a> </td>
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="exampleModal" tabindex="-1"
-                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">
-                                                                Detail</h1>
-                                                            <button type="button" class="btn-close"
-                                                                data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <ul>
-                                                                <li style="list-style-type: none;"> Nomor Transaksi
-                                                                    : 12346 </li>
-                                                                <li style="list-style-type: none;"> Tanggal :
-                                                                    08/09/2022 </li>
-                                                                <li style="list-style-type: none;"> Nama Pengguna :
-                                                                    Chunchunmadu
-                                                                </li>
-                                                                <li style="list-style-type: none;"> Metode
-                                                                    Pembayaran : Dana </li>
-                                                                <li style="list-style-type: none;"> Nominal :
-                                                                    Rp.1.000.000 </li>
-                                                                <li style="list-style-type: none;"> Status : Belum
-                                                                    Dibayar </li>
-                                                            </ul>
-                                                        </div>
-                                                        <br>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </td>
-                                            <td> 08/09/2022 </td>
-                                            <td> pubji </td>
-                                            </tr>
-                                        </tbody>
+                                        <%})%>
                                     </table>
                                 </div>
                             </div>

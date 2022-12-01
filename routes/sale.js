@@ -65,7 +65,7 @@ router.post('/arena-of-valor', async(request, response) => {
     name = request.body.name;
     phone_number = request.body.phone_number;
   }
-
+  request.session.cekNomor = phone_number;
   const query = Produk.findOne({ _id: denom });
   const doc = await query.exec();
   product = doc.name;

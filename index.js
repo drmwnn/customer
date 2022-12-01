@@ -41,11 +41,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// app.use((request, response, next) => { 
-//     response.locals.isLoggedIn = request.session.isLoggedIn;
-//     next();
-// })
-
 mongoose.connect(('mongodb://127.0.0.1:27017/AsdarrID'), (err,res) => {
     if(err){
         console.error(err);
