@@ -15,7 +15,7 @@ function angka(num){
 }
 
 function dateTime(){
-  const months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "October", "November", "December"];
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   var today = new Date();
   var date = +today.getDate() + ' ' + months[today.getMonth()]+ ', ' + today.getFullYear()
   var time = angka(today.getHours()) + ":" + angka(today.getMinutes()) + ":" + angka(today.getSeconds());

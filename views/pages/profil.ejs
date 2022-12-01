@@ -63,52 +63,18 @@
                                             <th> No Transaksi </th>
                                             <th> Tanggal </th>
                                             <th> Nama Produk </th>
-                                            </tr>
+                                            <th> Status Bayar </th>
+                                            <th> Status Transaksi </th>
                                         </thead>
 
                                         <%data.forEach(history => {%>
                                         <tbody>
-                                            <td>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <%= history.no %> </a> </td>
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="exampleModal" tabindex="-1"
-                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">
-                                                                Detail</h1>
-                                                            <button type="button" class="btn-close"
-                                                                data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <ul>
-                                                                <li style="list-style-type: none;"> Nomor Transaksi
-                                                                    : <%= history.no %> </li>
-                                                                <li style="list-style-type: none;"> Tanggal :
-                                                                    <%= history.date %> </li>
-                                                                <li style="list-style-type: none;"> Metode
-                                                                    Pembayaran : <%= history.payment %> </li>
-                                                                <li style="list-style-type: none;"> Nominal :
-                                                                    Rp.<%= history.price %> </li>
-                                                                <li style="list-style-type: none;"> Kategori :
-                                                                    <%= history.game %> </li>
-                                                                <li style="list-style-type: none;"> produk :
-                                                                    <%= history.product %> </li>
-                                                                <li style="list-style-type: none;"> Status pembayaran :
-                                                                    <%= history.stat_transaksi %> </li>
-                                                                <li style="list-style-type: none;"> Status transaksi :
-                                                                    <%= history.stat_transaksi %> </li>
-                                                            </ul>
-                                                        </div>
-                                                        <br>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <td><%= history.no %>
                                             </td>
                                             <td> <%= history.date %> </td>
                                             <td> <%= history.product %> </td>
+                                            <td> <%= history.stat_pembayaran %> </td>
+                                            <td> <%= history.stat_transaksi %> </td>
                                             </tr>
                                         </tbody>
                                         <%})%>

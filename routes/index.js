@@ -222,7 +222,6 @@ router.get("/pembayaran",(request, response) => {
 router.get('/profil', (request, response) => {
     const query2 = Sale.find({ phone_number: request.session.user.phone_number });
         query2.exec((error, data) => {
-            console.log(data);
         query2.getFilter();
         response.render('pages/profil', {
             data: data
