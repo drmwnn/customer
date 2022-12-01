@@ -1,8 +1,11 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const session = require('express-session')
-const mongoose = require('mongoose')
-const app = express()
+const express = require('express');
+const bodyParser = require('body-parser');
+const session = require('express-session');
+const mongoose = require('mongoose');
+const app = express();
+const flash = require("connect-flash");
+const passport = require("passport");
+require("./config/passport")(passport);
 const port = process.env.PORT || 3000;
 
 
@@ -11,15 +14,37 @@ app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-app.use(session({
-    secret: 'som3_secret_keys',
-    cookie: {}
-}))
+// express session middleware
+app.use(
+    session({
+        secret: "rahasia",
+        resave: true,
+        saveUninitialized: true,
+    })
+);
 
-app.use((request, response, next) => { 
-    response.locals.isLoggedIn = request.session.isLoggedIn;
+// Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+//connect flash
+app.use(flash());
+
+// global var
+app.use((req, res, next) => {
+    res.locals.success_msg = req.flash("success_msg");
+    res.locals.error_msg = req.flash("error_msg");
+    res.locals.error = req.flash("error");
+    res.locals.isLoggedIn = req.isAuthenticated();
+    res.locals.user = req.user;
+    req.session.user = req.user;
     next();
-})
+});
+
+// app.use((request, response, next) => { 
+//     response.locals.isLoggedIn = request.session.isLoggedIn;
+//     next();
+// })
 
 mongoose.connect(('mongodb://127.0.0.1:27017/AsdarrID'), (err,res) => {
     if(err){

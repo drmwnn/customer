@@ -4,6 +4,7 @@ const Member = require("../models/member");
 const Produk = require('../models/produk');
 const Sale = require('../models/sale');
 const router = express.Router();
+const passport = require("passport");
 
 function angka(num){
   if(num < 10){
@@ -49,16 +50,21 @@ function input() {
   });
 }
 
-
-
 router.post('/arena-of-valor', async(request, response) => {
   user_id = request.body.userID;
   server = request.body.server;
   denom = request.body.denom;
   payment = request.body.payment;
-  name = request.body.name;
-  phone_number = request.body.phone_number;
   no = getNo();
+  if(request.session.user){
+    if (request.isAuthenticated()) {
+      name = request.session.user.name;
+      phone_number = request.session.user.phone_number;
+    }
+  }else{
+    name = request.body.name;
+    phone_number = request.body.phone_number;
+  }
 
   const query = Produk.findOne({ _id: denom });
   const doc = await query.exec();

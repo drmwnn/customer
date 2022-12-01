@@ -187,7 +187,9 @@
                                     <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
                                         <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                                             <h6 class="mb-0 text-muted">Biaya Layanan</h6>
-                                            <p class="mb-0">Rp0 </p>
+                                            <% if (locals.biaya_layanan) { %>
+                                            <p class="mb-0"> <%= biaya_layanan %> </p>
+                                            <% } %>
                                         </div>
                                     </div>
                                     <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
@@ -195,8 +197,11 @@
                                             <h6 class="mb-0 text-muted">Metode Pembayaran</h6>
                                             <div class="mb-0 text-right">
                                                 <div class="d-flex flex-row align-items-center">
-                                                    <div class="me-2"><img src="../../assets/images/payment/bca.svg"
+                                                    <% if (locals.metode_img) { %>
+                                                    <div class="me-2"><img
+                                                            src="../../assets/images/payment/<%= metode_img %>"
                                                             width="auto" height="15px" /></div>
+                                                    <% } %>
                                                 </div>
                                             </div>
                                         </div>
@@ -204,7 +209,9 @@
                                     <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
                                         <div class="d-flex gap-2 w-100 justify-content-between">
                                             <h6 class="mb-0 text-muted">Nomor Rekening</h6>
-                                            <p class="mb-0">5930655386</p>
+                                            <% if (locals.norek) { %>
+                                            <p class="mb-0"><%= norek %></p>
+                                            <% } %>
                                         </div>
                                     </div>
                                     <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
@@ -217,19 +224,11 @@
                                     <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
                                         <div class="d-flex gap-2 w-100 justify-content-between">
                                             <h6 class="mb-0 text-muted">Cabang</h6>
-                                            <p class="mb-0">
-                                                KCP Kosambi </p>
+                                            <% if (locals.norek) { %>
+                                            <p class="mb-0"><%= cabang %></p>
+                                            <% } %>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row mt-3 align-items-center">
-
-                                <div class="col-lg-12 float-end text-end">
-                                    <button type="button" class="btn btn-warning btn-cara-bayar" data-bs-toggle="modal"
-                                        data-bs-target="#carabayarModal">
-                                        <i class="fas fa-info"></i> Cara Bayar
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -296,35 +295,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="carabayarModal" tabindex="-1" aria-labelledby="carabayarModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="modal-title">
-                            <div class="d-flex flex-row align-items-center">
-                                <div class="me-3"><img src="../assets/images/payment/bca.svg" width="auto"
-                                        height="20px" />
-                                </div>
-                                <div class="fw-bold">
-                                    Petunjuk Pembayaran Bank BCA </div>
-                            </div>
-                        </div>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
-                            <p>Klik menu "Transfer Antar Rekening". Pilih rekening yang hendak ditransfer dana, kemudian
-                                masukkan jumlah uang yang akan ditransfer. Tambahkan berita atau keterangan transfer
-                                jika diperlukan. Konfirmasi nomor rekening penerima beserta nominal yang ditransfer.</p>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>

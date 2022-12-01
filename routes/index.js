@@ -150,22 +150,60 @@ router.get('/youtube-premium', (req, res) => {
 });
 
 router.get("/pembayaran",(request, response) => {
+    var metode_img, norek;
     const query2 = Sale.findOne({ no: request.session.no });
         query2.exec((error, data) => {
-            console.log(data);
+            //console.log(data);
             nomor = data.no;
             category = data.game,
             publisher = data.publisher,
             harga = data.price;
             pembayaran = data.stat_pembayaran;
             transaksi = data.stat_transaksi;
-            total = data.price;
             biaya_layanan = 0;
+            total = harga + biaya_layanan;
             metode = data.payment;
             user_id = data.user_id;
             item = data.product;
             waktu = data.date;
-
+            
+            if (metode === "gopay") {
+                metode_img = "gopay.svg";
+                norek = "083123658885";
+                cabang = "-";
+            } else if (metode === "ovo") {
+                metode_img = "ovo.svg";
+                norek = "083123658885";
+                cabang = "-";
+            } else if (metode === "dana") {
+                metode_img = "dana.svg";
+                norek = "083123658885";
+                cabang = "-";
+            } else if (metode === "linkaja") {
+                metode_img = "linkaja.svg";
+                norek = "083123658885";
+                cabang = "-";
+            } else if (metode === "shopeepay") {
+                metode_img = "shopeepay.svg";
+                norek = "083123658885";
+                cabang = "-";
+            } else if (metode === "bca") {
+                metode_img = "bca.svg";
+                norek = "083123658885";
+                cabang = "-";
+            } else if (metode === "bni") {
+                metode_img = "bni.svg";
+                norek = "083123658885";
+                cabang = "-";
+            } else if (metode === "bri") {
+                metode_img = "bri.svg";
+                norek = "083123658885";
+                cabang = "-";
+            } else if (metode === "mandiri") {
+                metode_img = "mandiri.svg";
+                norek = "083123658885";
+                cabang = "-";
+            }
         query2.getFilter();
         response.render('pages/pembayaran', {
             category: category, 
@@ -177,7 +215,11 @@ router.get("/pembayaran",(request, response) => {
             id: nomor, 
             stat_pembayaran: pembayaran,
             stat_transaksi: transaksi,
-            total: total
+            total: total,
+            biaya_layanan: biaya_layanan,
+            metode_img : metode_img,
+            norek: norek
+            //cabang: cabang
         });
     });
 });
