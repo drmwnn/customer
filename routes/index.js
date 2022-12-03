@@ -214,8 +214,8 @@ router.get("/pembayaran",(request, response) => {
             total: total,
             biaya_layanan: biaya_layanan,
             metode_img : metode_img,
-            norek: norek
-            //cabang: cabang
+            norek: norek,
+            cabang: cabang
         });
     });
 });

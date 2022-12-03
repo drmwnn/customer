@@ -11,14 +11,14 @@ router.get('/lupa-kata-sandi-verification', (req, res) => {
 });
 
 router.post('/lupa-kata-sandi-verification', async(request, response) => {
-  const email = request.body.email;
-  console.log(email);
+  const phone_number = request.body.phone_number;
+  //console.log(phone_number);
  
-  if(email === "abcd@gmail.com"){
+  if(email === "6283123658885"){
     response.redirect('/lupa-kata-sandi-verification')
   }
   else{
-    response.render('pages/lupa-kata-sandi', { layout: false, error: 'Email anda tidak terdaftar!' });
+    response.render('pages/lupa-kata-sandi', { layout: false, error: 'Nomor WhatsApp anda tidak terdaftar!' });
   }
 })
 
@@ -32,13 +32,12 @@ router.post('/login', async(request, response, next) => {
 
 router.post('/register', async(request, response) => {
   const name = request.body.name;
-  const email = request.body.email;
   const phone_number = request.body.phone_number;
   const password = request.body.password;
 
   let errors = [];
 
-  if (!name || !email || !phone_number || !password) {
+  if (!name || !phone_number || !password) {
     errors.push({ msg: "Harap data di input semua" });
   }
 
@@ -46,7 +45,6 @@ router.post('/register', async(request, response) => {
     res.render("register", {
       errors,
       name,
-      email,
       phone_number,
       password,
     });
@@ -55,18 +53,16 @@ router.post('/register', async(request, response) => {
     User.findOne({ phone_number: phone_number }).then((user) => {
       if (user) {
         //usernya ada
-        errors.push({ msg: "Email sudah terdaftar" });
+        errors.push({ msg: "Nomor WhatsApp sudah terdaftar" });
         response.render("register", {
           errors,
           name,
-          email,
           phone_number,
           password,
         });
       } else {
         const newUser = new User({
           name,
-          email,
           phone_number,
           password,
         });
