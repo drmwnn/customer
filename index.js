@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 
 const fileStorage = multer.diskStorage ({
     destination: (request, file, cb) => {
-        cb(null, 'images');
+        cb(null, 'public/images');
     },
     filename: (request, file, cb) => {
         cb(null, new Date().getTime() + '-' + file.originalname);
