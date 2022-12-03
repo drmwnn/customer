@@ -6,6 +6,7 @@ const Sale = require('../models/sale');
 const router = express.Router();
 
 router.get('/', (req, res) => {
+    req.session.gambar = true;
     res.render('pages/index')
 });
 

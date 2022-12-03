@@ -5,6 +5,8 @@ const Produk = require('../models/produk');
 const Sale = require('../models/sale');
 const router = express.Router();
 const passport = require("passport");
+const multer = require('multer');
+
 
 function angka(num){
   if(num < 10){
@@ -78,6 +80,26 @@ router.post('/arena-of-valor', async(request, response) => {
 
   input();
   request.session.no = no;
+  request.session.gambar = true;
+  response.redirect('/pembayaran');
+});
+
+router.post('/pembayaran', async(request, response) => {
+  if (!request.file) {
+      const error = new Error('Please upload a file');
+      error.errorStatus = 400;
+      throw error;
+  }
+
+  const image = request.file.path;
+  const query = Sale.findOne({ no: request.session.no });
+  query.exec((error, data) => {
+    data.updateOne({
+      stat_pembayaran: "Sedang di Verifikasi", image : image}, (err, raw) => {
+      if (err) console.log(err);
+    });
+  });
+  request.session.gambar = false;
   response.redirect('/pembayaran');
 });
 

@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bagaskara560/Kelompok_2_4us.git"
+    "url": "git+https://github.com/drmwnn/customer.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bagaskara560/Kelompok_2_4us/issues"
+    "url": "https://github.com/drmwnn/customer/issues"
   },
-  "homepage": "https://github.com/bagaskara560/Kelompok_2_4us#readme",
+  "homepage": "https://github.com/drmwnn/customer#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.1",
@@ -27,6 +27,7 @@
     "express-session": "^1.17.3",
     "mongodb": "^4.12.0",
     "mongoose": "^6.7.2",
+    "multer": "^1.4.5-lts.1",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0"
   },

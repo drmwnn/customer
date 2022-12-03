@@ -5,14 +5,34 @@ const mongoose = require('mongoose');
 const app = express();
 const flash = require("connect-flash");
 const passport = require("passport");
+const multer = require('multer');
 require("./config/passport")(passport);
 const port = process.env.PORT || 3000;
 
+const fileStorage = multer.diskStorage ({
+    destination: (request, file, cb) => {
+        cb(null, 'images');
+    },
+    filename: (request, file, cb) => {
+        cb(null, new Date().getTime() + '-' + file.originalname);
+    }
+});
+
+const fileFilter = (request, file, cb) => {
+    if (file.mimetype === 'image/png' || 
+        file.mimetype === 'image/jpg' || 
+        file.mimetype === 'image/jpeg') {
+        cb(null, true);
+    } else {
+        cb(null, false);
+    }
+};
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
+app.use(multer({storage: fileStorage, fileFilter: fileFilter}).single('image'));
 
 // express session middleware
 app.use(
@@ -22,7 +42,7 @@ app.use(
         saveUninitialized: true,
     })
 );
-
+ 
 // Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
@@ -37,6 +57,7 @@ app.use((req, res, next) => {
     res.locals.error = req.flash("error");
     res.locals.isLoggedIn = req.isAuthenticated();
     res.locals.user = req.user;
+    res.locals.gambar = req.session.gambar;
     req.session.user = req.user;
     next();
 });
@@ -53,6 +74,7 @@ mongoose.connect(('mongodb://127.0.0.1:27017/AsdarrID'), (err,res) => {
 const index = require('./routes/index');
 const user = require('./routes/auth');
 const sale = require('./routes/sale');
+
 
 
 app.use('/', index);
