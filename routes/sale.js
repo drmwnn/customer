@@ -372,6 +372,134 @@ router.post('/lifeafter', async(request, response) => {
   response.redirect('/pembayaran');
 });
 
+router.post('/lokapala', async(request, response) => {
+  user_id = request.body.userID;
+  server = request.body.server;
+  denom = request.body.denom;
+  payment = request.body.payment;
+  no = getNo();
+  if(request.session.user){
+    if (request.isAuthenticated()) {
+      name = request.session.user.name;
+      phone_number = request.session.user.phone_number;
+    }
+  }else{
+    name = request.body.name;
+    phone_number = request.body.phone_number;
+  }
+  request.session.cekNomor = phone_number;
+  const query = Produk.findOne({ _id: denom });
+  const doc = await query.exec();
+  product = doc.name;
+  game = doc.category;
+  publisher = doc.publisher;
+  price = doc.price;
+  date = dateTime();
+  console.log(date);
+  query.getFilter();
+
+  input();
+  request.session.no = no;
+  request.session.gambar = true;
+  response.redirect('/pembayaran');
+});
+
+router.post('/lords-mobile', async(request, response) => {
+  user_id = request.body.userID;
+  server = request.body.server;
+  denom = request.body.denom;
+  payment = request.body.payment;
+  no = getNo();
+  if(request.session.user){
+    if (request.isAuthenticated()) {
+      name = request.session.user.name;
+      phone_number = request.session.user.phone_number;
+    }
+  }else{
+    name = request.body.name;
+    phone_number = request.body.phone_number;
+  }
+  request.session.cekNomor = phone_number;
+  const query = Produk.findOne({ _id: denom });
+  const doc = await query.exec();
+  product = doc.name;
+  game = doc.category;
+  publisher = doc.publisher;
+  price = doc.price;
+  date = dateTime();
+  console.log(date);
+  query.getFilter();
+
+  input();
+  request.session.no = no;
+  request.session.gambar = true;
+  response.redirect('/pembayaran');
+});
+
+router.post('/mobile-legends', async(request, response) => {
+  user_id = request.body.userID;
+  server = request.body.server;
+  denom = request.body.denom;
+  payment = request.body.payment;
+  no = getNo();
+  if(request.session.user){
+    if (request.isAuthenticated()) {
+      name = request.session.user.name;
+      phone_number = request.session.user.phone_number;
+    }
+  }else{
+    name = request.body.name;
+    phone_number = request.body.phone_number;
+  }
+  request.session.cekNomor = phone_number;
+  const query = Produk.findOne({ _id: denom });
+  const doc = await query.exec();
+  product = doc.name;
+  game = doc.category;
+  publisher = doc.publisher;
+  price = doc.price;
+  date = dateTime();
+  console.log(date);
+  query.getFilter();
+
+  input();
+  request.session.no = no;
+  request.session.gambar = true;
+  response.redirect('/pembayaran');
+});
+
+router.post('/omega-legends', async(request, response) => {
+  user_id = request.body.userID;
+  server = request.body.server;
+  denom = request.body.denom;
+  payment = request.body.payment;
+  no = getNo();
+  if(request.session.user){
+    if (request.isAuthenticated()) {
+      name = request.session.user.name;
+      phone_number = request.session.user.phone_number;
+    }
+  }else{
+    name = request.body.name;
+    phone_number = request.body.phone_number;
+  }
+  request.session.cekNomor = phone_number;
+  const query = Produk.findOne({ _id: denom });
+  const doc = await query.exec();
+  product = doc.name;
+  game = doc.category;
+  publisher = doc.publisher;
+  price = doc.price;
+  date = dateTime();
+  console.log(date);
+  query.getFilter();
+
+  input();
+  request.session.no = no;
+  request.session.gambar = true;
+  response.redirect('/pembayaran');
+});
+
 router.post('/pembayaran', async(request, response) => {
   if (!request.file) {
       const error = new Error('Please upload a file');
