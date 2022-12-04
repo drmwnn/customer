@@ -32,6 +32,11 @@ function getNo() {
 }
 
 function input() {
+  if (payment === "alfamart" || payment === "indomaret" || payment === "alfamidi") {
+    retail = "yes";
+  } else {
+    retail = "no";
+  }
   var sale_to_insert = new Sale({
     no: no,
     name: name,
@@ -39,6 +44,7 @@ function input() {
     user_id: user_id,
     server: server,
     payment: payment,
+    retail: retail,
     price: price,
     game: game,
     publisher: publisher,
@@ -836,7 +842,10 @@ router.post('/pembayaran', async(request, response) => {
       stat_pembayaran: "Sedang di Verifikasi", image : image}, (err, raw) => {
       if (err) console.log(err);
     });
+    
   });
+  
+  request.session.gambar = false;
   response.redirect('/pembayaran');
 });
 

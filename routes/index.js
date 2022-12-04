@@ -167,7 +167,7 @@ router.get("/pembayaran",(request, response) => {
             norek = data.kode;
             cabang = "-"
 
-            if(transaksi == "Belum Diproses"){
+            if(pembayaran == "Belum Dibayar"){
                 request.session.gambar = true;
             }else{
                 request.session.gambar = false;
@@ -257,6 +257,7 @@ router.get("/pembayaran",(request, response) => {
             tagihan: tagihan,
             logoGame: img
         });
+        //console.log(request.session.gambar);
     });
 });
 
