@@ -1,7 +1,7 @@
 const { request, response } = require('express');
 const express = require('express');
 const user = require('../models/member');
-const price = require('../models/produk');
+const Produk = require('../models/produk');
 const Sale = require('../models/sale');
 const router = express.Router();
 
@@ -146,7 +146,7 @@ router.get('/youtube-premium', (req, res) => {
 });
 
 router.get("/pembayaran",(request, response) => {
-    var metode_img, norek, cabang;
+    var metode_img, norek, cabang, img;
     const query2 = Sale.findOne({ no: request.session.no });
         query2.exec((error, data) => {
             //console.log(data);
@@ -157,7 +157,7 @@ router.get("/pembayaran",(request, response) => {
             pembayaran = data.stat_pembayaran;
             transaksi = data.stat_transaksi;
             biaya_layanan = "0";
-            total = harga + biaya_layanan;
+            total = harga;
             metode = data.payment;
             user_id = data.user_id;
             item = data.product;
@@ -210,15 +210,33 @@ router.get("/pembayaran",(request, response) => {
                 metode_img = "mandiri.svg";
                 norek = "083123658885";
                 cabang = "-";
-            } else if (metode === "alfamart" || "alfa/indo"){
+            } else if (metode === "alfamart"){
                 metode_img = "alfamart.svg";
                 norek = kode;
                 cabang = "-";
                 tagihan = "Kode Pembayaran";
                 biaya_layanan = "2.500";
+            } else if (metode === "alfamidi"){
+                metode_img = "alfamidi.svg";
+                norek = kode;
+                cabang = "-";
+                tagihan = "Kode Pembayaran";
+                biaya_layanan = "2.500";
+            } else if (metode === "indomaret"){
+                metode_img = "indomaret.svg";
+                norek = kode;
+                cabang = "-";
+                tagihan = "Kode Pembayaran";
+                biaya_layanan = "2.500";
             }
+            //console.log(metode_img);
+            const query3 = Produk.findOne({name: item});
+            query3.exec((err, data) => {
+                img = data.image;
+                //console.log(data.image);
+            });
 
-
+        
         query2.getFilter();
         response.render('pages/pembayaran', {
             category: category, 
@@ -236,7 +254,8 @@ router.get("/pembayaran",(request, response) => {
             norek: norek,
             cabang: cabang,
             kode: kode,
-            tagihan: tagihan
+            tagihan: tagihan,
+            logoGame: img
         });
     });
 });

@@ -5,7 +5,8 @@ const mongoose = require('mongoose')
         category: String,
         publisher: String,
         name: String,
-        price: String
+        price: String,
+        image: String
 });
 
 module.exports = mongoose.model("Produk", produkSchema);

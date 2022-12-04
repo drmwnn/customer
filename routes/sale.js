@@ -76,11 +76,12 @@ router.post('/arena-of-valor', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
   request.session.no = no;
+  request.session.img = product;
   request.session.gambar = true;
   response.redirect('/pembayaran');
 });
@@ -108,7 +109,7 @@ router.post('/au2-mobile', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -140,7 +141,7 @@ router.post('/call-of-duty-mobile', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -172,7 +173,7 @@ router.post('/cloud-song', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -204,7 +205,7 @@ router.post('/football-master-2', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -236,7 +237,7 @@ router.post('/free-fire', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -268,7 +269,7 @@ router.post('/genshin-impact', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -300,7 +301,7 @@ router.post('/hyper-front', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -332,7 +333,7 @@ router.post('/laplace', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -364,7 +365,7 @@ router.post('/lifeafter', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -396,7 +397,7 @@ router.post('/lokapala', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -428,7 +429,7 @@ router.post('/lords-mobile', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -460,7 +461,7 @@ router.post('/mobile-legends', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -492,7 +493,7 @@ router.post('/omega-legends', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -524,7 +525,7 @@ router.post('/point-blank', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -556,7 +557,7 @@ router.post('/pubg-mobile', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -588,7 +589,7 @@ router.post('/speed-drifters', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -620,7 +621,7 @@ router.post('/tom-and-jerry-chase', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -652,7 +653,7 @@ router.post('/tower-of-fantasy', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -684,7 +685,7 @@ router.post('/werewolf', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -716,7 +717,7 @@ router.post('/garena-shell', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -748,7 +749,7 @@ router.post('/minecraft', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -780,7 +781,7 @@ router.post('/smile-one', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();
@@ -812,7 +813,7 @@ router.post('/youtube-premium', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  console.log(date);
+  //console.log(date);
   query.getFilter();
 
   input();

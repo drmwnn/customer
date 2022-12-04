@@ -2,6 +2,7 @@ $(document).ready(function() {
     $("input[type='radio']").click(function() {
         var harga = $("input[name='denom']:checked").val();
         var payment = $("input[name='payment']:checked").val();
+        console.log(harga, payment);
 
         fetch("https://produk.asepdarmawan3.repl.co").then((data) => {
             return data.json();
@@ -19,7 +20,7 @@ $(document).ready(function() {
             document.getElementById("price_shopeepay").innerHTML = tableData;
             document.getElementById("price_ovo").innerHTML = tableData;
             document.getElementById("price_dana").innerHTML = tableData;
-            document.getElementById("price_qris").innerHTML = tableData;
+            // document.getElementById("price_qris").innerHTML = tableData;
             document.getElementById("price_bank").innerHTML = tableData;
             document.getElementById("price_bca").innerHTML = tableData;
             document.getElementById("price_bri").innerHTML = tableData;
@@ -27,6 +28,6 @@ $(document).ready(function() {
             document.getElementById("price_mandiri").innerHTML = tableData;
         });
 
-        console.log(payment);
+        //console.log(payment);
     });
 });

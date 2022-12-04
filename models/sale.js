@@ -13,7 +13,7 @@ const mongoose = require("mongoose"),
         date: String,
         stat_pembayaran: String,
         stat_transaksi: String,
-        kode: String,
+        kode: Array,
         image: String
     });
     module.exports = mongoose.model("Sale", saleSchema);
