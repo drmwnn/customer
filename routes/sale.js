@@ -45,7 +45,8 @@ function input() {
     product: product,
     date: date,
     stat_pembayaran: "Belum Dibayar",
-    stat_transaksi: "Belum Diproses"
+    stat_transaksi: "Belum Diproses",
+    kode: "-"
   });
   sale_to_insert.save((err, dt) => {
     if (err) console.log(err);
@@ -835,7 +836,6 @@ router.post('/pembayaran', async(request, response) => {
       if (err) console.log(err);
     });
   });
-  request.session.gambar = false;
   response.redirect('/pembayaran');
 });
 

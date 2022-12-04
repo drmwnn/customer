@@ -1,7 +1,7 @@
 {
-  "name": "4us.com",
+  "name": "asdarr.id-admin",
   "version": "1.0.0",
-  "description": "website 4us.com",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",

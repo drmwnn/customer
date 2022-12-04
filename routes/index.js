@@ -146,7 +146,7 @@ router.get('/youtube-premium', (req, res) => {
 });
 
 router.get("/pembayaran",(request, response) => {
-    var metode_img, norek;
+    var metode_img, norek, cabang;
     const query2 = Sale.findOne({ no: request.session.no });
         query2.exec((error, data) => {
             //console.log(data);
@@ -156,12 +156,23 @@ router.get("/pembayaran",(request, response) => {
             harga = data.price;
             pembayaran = data.stat_pembayaran;
             transaksi = data.stat_transaksi;
-            biaya_layanan = 0;
+            biaya_layanan = "0";
             total = harga + biaya_layanan;
             metode = data.payment;
             user_id = data.user_id;
             item = data.product;
             waktu = data.date;
+            kode = data.kode;
+            tagihan = "Nomor Rekening";
+            norek = data.kode;
+            cabang = "-"
+
+            if(transaksi == "Belum Diproses"){
+                request.session.gambar = true;
+            }else{
+                request.session.gambar = false;
+            }
+            //console.log(request.session.gambar);
             
             if (metode === "gopay") {
                 metode_img = "gopay.svg";
@@ -199,7 +210,15 @@ router.get("/pembayaran",(request, response) => {
                 metode_img = "mandiri.svg";
                 norek = "083123658885";
                 cabang = "-";
+            } else if (metode === "alfamart" || "alfa/indo"){
+                metode_img = "alfamart.svg";
+                norek = kode;
+                cabang = "-";
+                tagihan = "Kode Pembayaran";
+                biaya_layanan = "2.500";
             }
+
+
         query2.getFilter();
         response.render('pages/pembayaran', {
             category: category, 
@@ -215,7 +234,9 @@ router.get("/pembayaran",(request, response) => {
             biaya_layanan: biaya_layanan,
             metode_img : metode_img,
             norek: norek,
-            cabang: cabang
+            cabang: cabang,
+            kode: kode,
+            tagihan: tagihan
         });
     });
 });

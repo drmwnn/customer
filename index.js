@@ -34,15 +34,26 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 app.use(multer({storage: fileStorage, fileFilter: fileFilter}).single('image'));
 
-// express session middleware
+// Session Setup
 app.use(
     session({
-        secret: "rahasia",
+        // It holds the secret key for session
+        secret: "some_secret_key",
+
+        // Forces the session to be saved
+        // back to the session store
         resave: true,
-        saveUninitialized: true,
+
+        // Forces a session that is "uninitialized"
+        // to be saved to the store
+        saveUninitialized: false,
+        cookie: {
+            // Session expires after 1 day of inactivity.
+            expires: 86400000
+        }
     })
 );
- 
+
 // Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
