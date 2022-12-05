@@ -12,14 +12,18 @@ router.get('/lupa-kata-sandi-verification', (req, res) => {
 
 router.post('/lupa-kata-sandi-verification', async(request, response) => {
   const phone_number = request.body.phone_number;
-  //console.log(phone_number);
- 
-  if(email === "6283123658885"){
-    response.redirect('/lupa-kata-sandi-verification')
-  }
-  else{
-    response.render('pages/lupa-kata-sandi', { layout: false, error: 'Nomor WhatsApp anda tidak terdaftar!' });
-  }
+  const customer = User.findOne({phone_number: phone_number});
+  customer.exec((err, data) => {
+    if (err) throw err;
+    if(phone_number === customer.phone_number){
+      response.redirect('/lupa-kata-sandi-verification')
+    }
+    else{
+      response.render('pages/lupa-kata-sandi', { layout: false, error: 'Nomor WhatsApp anda tidak terdaftar!' });
+    }
+
+  });
+  
 })
 
 router.post('/login', async(request, response, next) => {
@@ -42,7 +46,7 @@ router.post('/register', async(request, response) => {
   }
 
   if (errors.length > 0) {
-    res.render("register", {
+    res.render("pages/register", {
       errors,
       name,
       phone_number,
@@ -53,12 +57,11 @@ router.post('/register', async(request, response) => {
     User.findOne({ phone_number: phone_number }).then((user) => {
       if (user) {
         //usernya ada
-        errors.push({ msg: "Nomor WhatsApp sudah terdaftar" });
-        response.render("register", {
-          errors,
+        response.render("pages/register", {
+          error: 'Nomor WhatsApp anda sudah terdaftar!',
           name,
           phone_number,
-          password,
+          password
         });
       } else {
         const newUser = new User({

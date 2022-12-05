@@ -30,6 +30,13 @@
                         <img src="../assets/images/logo/logo-a.png" height="39">
                     </a>
                 </div>
+                <% if(success_msg !=''){ %>
+                <div class="alert alert-success alert-dismissible fade show" style="font-size: 80%;text-align:center;"
+                    role="alert">
+                    <strong><%= success_msg %></strong>
+
+                </div>
+                <% } %>
                 <form action="/auth/login" method="post">
                     <div class="row g-3">
                         <div class="fields-form on-progress">
