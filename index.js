@@ -8,6 +8,7 @@ const passport = require("passport");
 const multer = require('multer');
 require("./config/passport")(passport);
 const port = process.env.PORT || 3000;
+const database = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/AsdarrID';
 
 const fileStorage = multer.diskStorage ({
     destination: (request, file, cb) => {
@@ -73,7 +74,7 @@ app.use((req, res, next) => {
     next();
 });
 
-mongoose.connect(('mongodb://127.0.0.1:27017/AsdarrID'), (err,res) => {
+mongoose.connect((database), (err,res) => {
     if(err){
         console.error(err);
     }
