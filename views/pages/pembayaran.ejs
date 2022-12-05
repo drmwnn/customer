@@ -247,12 +247,12 @@
                         <div class="card border-0 mb-4">
                             <div class="card-body">
                                 <div class="d-flex gap-3 align-items-center" style="justify-content: left!important;">
+                                    <% if (locals.logoGame) { %>
                                     <div class="thumbnail-product">
-                                        <% if (locals.logoGame) { %>
                                         <img src="assets/images/game/<%= logoGame %>" alt="" class="rounded-3"
                                             height="100px">
-                                        <% } %>
                                     </div>
+                                    <% } %>
                                     <div class="product-data">
                                         <% if (locals.category) { %>
                                         <h1 class="fs-5 mb-1"><%= category %></h1>
