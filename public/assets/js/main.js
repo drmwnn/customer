@@ -124,10 +124,9 @@ function valMasuk() {
 //disable 
 document.onkeydown = function(e) {
     if (e.ctrlKey && 
-        (e.keyCode === 67 || 
-         e.keyCode === 86 || 
-         e.keyCode === 85 || 
-         e.keyCode === 117)) {
+        (
+         e.keyCode === 85 || // DISABLE CTRL + U
+         e.keyCode === 117)) { 
         
         return false;
     } else {
