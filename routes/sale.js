@@ -147,7 +147,6 @@ router.post('/call-of-duty-mobile', async(request, response) => {
   publisher = doc.publisher;
   price = doc.price;
   date = dateTime();
-  //console.log(date);
   query.getFilter();
 
   input();
