@@ -196,19 +196,19 @@ router.get("/pembayaran",(request, response) => {
                 cabang = "-";
             } else if (metode === "bca") {
                 metode_img = "bca.svg";
-                norek = "083123658885";
+                norek = "5930655386";
                 cabang = "-";
             } else if (metode === "bni") {
                 metode_img = "bni.svg";
-                norek = "083123658885";
+                norek = "1153293947";
                 cabang = "-";
             } else if (metode === "bri") {
                 metode_img = "bri.svg";
-                norek = "083123658885";
+                norek = "416101033757531";
                 cabang = "-";
             } else if (metode === "mandiri") {
                 metode_img = "mandiri.svg";
-                norek = "083123658885";
+                norek = "1650002006337";
                 cabang = "-";
             } else if (metode === "alfamart"){
                 metode_img = "alfamart.svg";
